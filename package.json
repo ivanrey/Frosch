@@ -1,5 +1,11 @@
 {
-  "name": "frosh",
+  "name": "frosch",
   "version": "0.0.1",
-  "main":"index.html"
+  "main": "main.html",
+  "window":{
+    "kiosk": false,
+    "width": 1280,
+    "height": 769
+  }
+
 }

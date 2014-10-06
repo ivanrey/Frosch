@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Frosch</title>
+
+
+
+    <script>
+        less = {
+            env: "development",
+            logLevel: 2,
+            async: false,
+            fileAsync: false,
+            poll: 1000,
+            functions: {},
+            dumpLineNumbers: "comments",
+            relativeUrls: false,
+            globalVars: {
+                var1: '"string value"',
+                var2: 'regular value'
+            }
+        };
+    </script>
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less">
+    <script src="components/less/dist/less-1.7.5.js"></script>
+    <script src="components/angular/angular.js"></script>
+    <script src="components/angular-translate/angular-translate.js"></script>
+    <script src="components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="components/angular-hotkeys/build/hotkeys.js"></script>
+
+    <script src="js/translate.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers/inicioCtrl.js"></script>
+    <script src="js/controllers/seleccionEquiposCtrl.js"></script>
+    <script src="js/directives/botonera.js"></script>
+    <script src="js/controllers/BotonesCtrl.js"></script>
+    <script src="js/directives/opcion.js"></script>
+    <script src="js/model/Configuracion.js"></script>
+
+</head>
+<body ng-app="Frosch">
+<ui-view></ui-view>
+</body>
+</html>
