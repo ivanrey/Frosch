@@ -1,9 +1,13 @@
 angular.module('Frosch')
     .controller('SeleccionEquposCtrl',
-    function ($scope, hotkeys, config) {
+    function ($scope, $state, hotkeys, config) {
 
-        $scope.configurar = function configurar(opcion) {
-            config.setMaxPorEquipo(opcion);
-            console.log('opcion ' + opcion);
-        }
+        $scope.callback = {
+            configurar: function configurar(opcion) {
+                config.setMaxPorEquipo(opcion);
+                $state.go('jugar.seleccionPuntos')
+            }
+        };
+
+
     });

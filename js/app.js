@@ -16,21 +16,40 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                 controller: 'InicioCtrl',
                 templateUrl: "html/inicio.html"
             })
-            .state('jugar',{
+            .state('jugar', {
                 url: '/jugar',
                 template: '<ui-view/>',
-                resolve:{
-                    config: function(ConfiguracionCls){
+                resolve: {
+                    config: function (ConfiguracionCls) {
                         return new ConfiguracionCls();
                     }
                 }
             })
-            .state('jugar.seleccionEquipos',{
+            .state('jugar.seleccionEquipos', {
                 url: "/equipos",
                 controller: 'SeleccionEquposCtrl',
                 templateUrl: "html/seleccionEquipos.html"
+            })
+            .state('jugar.seleccionPuntos', {
+                url: "/puntos",
+                controller: 'SeleccionPuntosCtrl',
+                templateUrl: "html/seleccionPuntos.html"
             });
 
 
         hotkeysProvider.includeCheatSheet = false;
+    }).
+    run(function ($rootScope) {
+
+        /**
+         * Debugging Tools
+         *
+         * Allows you to execute debug functions from the view
+         */
+        $rootScope.log = function (variable) {
+            console.log(variable);
+        };
+        $rootScope.alert = function (text) {
+            alert(text);
+        };
     });

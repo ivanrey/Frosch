@@ -24,7 +24,7 @@ angular.module('Frosch')
                 combo: 'enter',
                 callback: function () {
                     if($scope.seleccionado)
-                        $scope.onSelected()($scope.seleccionado);
+                        $scope.callback.configurar($scope.seleccionado);
                 }
             })
         ;

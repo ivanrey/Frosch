@@ -5,12 +5,12 @@ angular.module('Frosch')
             restrict: 'E',
             transclude: true,
             controller: 'BotonesCtrl',
-            template: '<div ng-transclude></div>',
+            template: '<div class="botones" ng-transclude></div>',
 
             scope: {
                 seleccionado: '=',
                 max: '=',
-                onSelected: '&'
+                callback: '='
             }
         }
     });

@@ -7,9 +7,7 @@ angular.module('Frosch')
             templateUrl: 'html/opcion.html',
             link: function(scope, element, attrs){
                 scope.opcion = attrs.opcion;
-                scope.onSelected = function(){
-                    scope.$parent.$parent.onSelected()(scope.opcion);
-                };
+
             },
             scope: true
         }
