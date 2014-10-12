@@ -34,6 +34,16 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                 url: "/puntos",
                 controller: 'SeleccionPuntosCtrl',
                 templateUrl: "html/seleccionPuntos.html"
+            })
+            .state('jugar.seleccionBlanqueada', {
+                url: "/blanqueadas",
+                controller: 'SeleccionBlanqueadaCtrl',
+                templateUrl: "html/seleccionBlanqueada.html"
+            })
+            .state('jugar.seleccionJugadores', {
+                url: "/jugadores",
+                controller: 'SeleccionJugadoresCtrl',
+                templateUrl: "html/seleccionJugadores.html"
             });
 
 
@@ -52,4 +62,6 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
         $rootScope.alert = function (text) {
             alert(text);
         };
+
+        $rootScope.creditos = 0; // así no deben perderse nunca créditos
     });

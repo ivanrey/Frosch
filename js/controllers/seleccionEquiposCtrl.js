@@ -1,6 +1,6 @@
 angular.module('Frosch')
     .controller('SeleccionEquposCtrl',
-    function ($scope, $state, hotkeys, config) {
+    function ($scope, $state, config) {
 
         $scope.callback = {
             configurar: function configurar(opcion) {

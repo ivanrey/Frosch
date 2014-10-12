@@ -1,6 +1,6 @@
 angular.module('Frosch')
     .controller('SeleccionPuntosCtrl',
-    function ($scope, $state, hotkeys, config) {
+    function ($scope, $state, config) {
 
         $scope.seleccionado = 0;
 
@@ -10,6 +10,7 @@ angular.module('Frosch')
             configurar: function configurar(opcion) {
                 config.puntos = config.configuracion.puntajes[opcion - 1];
                 $state.go('jugar.seleccionBlanqueada')
+
             }
         }
     });
