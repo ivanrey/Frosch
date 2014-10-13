@@ -10,5 +10,6 @@
   "ESCOGE_BLANQUEADA": "Escoge la Blanqueada",
   "CREDITOS": "Créditos",
   "PARA_X_JUGADORES": "Para %numJugadores% Jugador%es%",
-  "JUGADOR": "Jugador"
+  "JUGADOR": "Jugador",
+  "TURNO": "Turno"
 }

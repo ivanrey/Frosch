@@ -4,7 +4,42 @@
 
     </div>
 
-    <div class="columna monedas"></div>
+    <div class="columna monedas">
+        <div class="datos">
+            <div class="turno">
+                <div class="titulo">{{"TURNO" | translate}}</div>
+                <div class="numero">{{chico.jugadorActual.turno}}</div>
+            </div>
+            <div class="puntos">
+                <div class="titulo">{{"PUNTOS" | translate}}</div>
+                <div class="numero">{{chico.jugadorActual.puntos}}</div>
+            </div>
+        </div>
+
+
+        <div class="argollas">
+            <div class="argolla" ng-repeat="argolla in chico.jugadorActual.ultimasArgollas track by $index"
+                 ng-class="{inactiva: !argolla}">
+                {{ argolla || '&nbsp'}}
+            </div>
+        </div>
+
+        <div class="tiros">
+            <div class="tiro" ng-repeat="(tiro, puntaje) in chico.jugadorActual.tiros track by tiro">
+                <div class="datos">
+                    <div class="turno">
+                        <div class="titulo">{{"TURNO" | translate}}</div>
+                        <div class="numero">{{tiro}}</div>
+                    </div>
+                    <div class="puntos">
+                        <div class="titulo">{{"PUNTOS" | translate}}</div>
+                        <div class="numero">{{chico.jugadorActual.puntos}}</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <div class="columna orificios"></div>
 </div>

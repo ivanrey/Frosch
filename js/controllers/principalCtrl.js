@@ -4,6 +4,7 @@ angular.module('Frosch')
 
         $scope.jugadores = chico.getJugadores();
         $scope.config = config;
+        $scope.chico = chico;
 
         $scope.jugadores[0].activar();
     });
