@@ -4,7 +4,7 @@ angular.module('Frosch')
 
         hotkeys.bindTo($scope)
             .add({
-                combo: 'down',
+                combo: $scope.keymap.abajo,
                 callback: function () {
                     $scope.seleccionado++;
                     if ($scope.seleccionado > $scope.max)
@@ -13,7 +13,7 @@ angular.module('Frosch')
                 }
             })
             .add({
-                combo: 'up',
+                combo: $scope.keymap.arriba,
                 callback: function () {
                     $scope.seleccionado--;
                     if ($scope.seleccionado < 1)
@@ -21,7 +21,7 @@ angular.module('Frosch')
                 }
             })
             .add({
-                combo: 'enter',
+                combo: $scope.keymap.enter,
                 callback: function () {
                     if($scope.seleccionado)
                         $scope.callback.configurar($scope.seleccionado);

@@ -53,6 +53,12 @@ body {
   line-height: 60px;
 }
 
+.pequeno {
+  font-size: 40px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px #eaff47, 0 0 70px #ff8554, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
+  line-height: 30px;
+}
+
 .centrar {
   text-align: center;
 }
@@ -148,11 +154,11 @@ button:hover, button.seleccionado {
     padding-right: 15px;
   }
   &.orificios {
-
+    width: 37.5%;
   }
 }
 
-.seleccionJugadores.jugadores {
+.seleccionJugadores .jugadores {
   progress {
     /* Important Thing */
     -webkit-appearance: none;
@@ -161,15 +167,11 @@ button:hover, button.seleccionado {
   }
 
   progress::-webkit-progress-bar {
-    background-image: url("../assets/img/desactivado.png");
-    background-color: transparent;
-
+    background: transparent url("../assets/img/desactivado.png");
   }
 
   progress::-webkit-progress-value {
-    background-image: url("../assets/img/activado.png");
-    background-color: transparent;
-
+    background: transparent url("../assets/img/activado.png");
   }
 }
 
@@ -286,6 +288,30 @@ button:hover, button.seleccionado {
   overflow: hidden;
 }
 
+.orificios {
+  .meta {
+    span {
+      line-height: 26px;
+      font-size: x-large;
+    }
+  }
+
+  .argollas {
+    margin-top: 20px;
+    .argolla {
+      .cuadrado(130px);
+      margin: 5px;
+      font-size: 50px;
+
+      &.rana, &.ranita {
+        background-color: @color-contraste;
+        color: darkred;
+      }
+    }
+
+  }
+}
+
 .argolla {
   border: solid 5px white;
   background: @blanco;
@@ -301,5 +327,10 @@ button:hover, button.seleccionado {
     background: #aaa;
     box-shadow: inset 0 0 0px 5px #333;
 
+  }
+
+  &rotar {
+    transform: rotateY(360deg);
+    transition: all 0.5s ease-in-out;
   }
 }

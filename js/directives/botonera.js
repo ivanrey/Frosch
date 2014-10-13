@@ -10,7 +10,8 @@ angular.module('Frosch')
             scope: {
                 seleccionado: '=',
                 max: '=',
-                callback: '='
+                callback: '=',
+                keymap: '='
             }
         }
     });

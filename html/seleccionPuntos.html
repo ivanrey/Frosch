@@ -2,7 +2,7 @@
     <div class="seleccionPuntos columnas-2">
         <div class="grande centrar">{{ 'ESCOGE_PUNTAJE' | translate }}</div>
 
-        <botonera max="6" callback="callback" seleccionado="seleccionado">
+        <botonera max="6" callback="callback" seleccionado="seleccionado" keymap="config.configuracion.keymap">
             <opcion ng-repeat="puntaje in puntajes" opcion="{{$index + 1}}">{{puntaje}} {{'PUNTOS' | translate }}
             </opcion>
         </botonera>

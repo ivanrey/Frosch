@@ -41,5 +41,21 @@
         </div>
     </div>
 
-    <div class="columna orificios"></div>
+    <div class="columna orificios">
+        <div class="centrar meta">
+            <span>{{"META" | translate}}</span>
+
+            <div class="pequeno">{{config.puntos}} {{"PUNTOS" | translate}}</div>
+        </div>
+        <div class="argollas">
+            <div class="argolla"
+                 ng-repeat="orificio in config.configuracion.orificios track by $index"
+                 ng-class="{
+                    rana: $index+1==config.configuracion.orificioRana,
+                    ranita: $index+1==config.configuracion.orificioRanita
+                    }">
+                {{orificio}}
+            </div>
+        </div>
+    </div>
 </div>

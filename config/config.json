@@ -21,5 +21,38 @@
     "1800": 2,
     "2000": 2
   },
-  "maxArgollas": 6
+  "maxArgollas": 6,
+  "orificios": [
+    10,
+    100,
+    12,
+    15,
+    120,
+    18,
+    20,
+    40,
+    25,
+    30,
+    35,
+    38
+  ],
+  "orificioRana": 2,
+  "orificioRanita": 5,
+  "keymap": {
+    "arriba": "up",
+    "abajo": "down",
+    "enter": "enter",
+    "orificio1": "0",
+    "orificio2": ".",
+    "orificio3": "+",
+    "orificio4": "1",
+    "orificio5": "2",
+    "orificio6": "3",
+    "orificio7": "4",
+    "orificio8": "5",
+    "orificio9": "6",
+    "orificio10": "7",
+    "orificio11": "8",
+    "orificio12": "9"
+  }
 }
