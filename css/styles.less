@@ -2,12 +2,21 @@
   font-family: cs;
   src: url("../assets/fonts/cs_regular.ttf");
 }
+
+@fondo-principal: rgba(42, 61, 39, 0.8);
+@color-contraste: #d89e0e;
+
+.fondo-principal {
+  background-color: @fondo-principal;
+}
+
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
   -webkit-user-select: none;
 }
+
 .view {
   width: 100%;
   height: 100%;
@@ -15,12 +24,15 @@ body {
   top: 0;
   left: 0;
 }
+
 .fondo-laguna {
   background: url("../assets/img/fondo-laguna.png") no-repeat;
 }
+
 .fondo-rana {
   background: url("../assets/img/fondo-rana.png") no-repeat;
 }
+
 .grande {
   font-size: 100px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px #33ff38, 0 0 70px #a1ff7d, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
@@ -36,28 +48,34 @@ body {
 .centrar {
   text-align: center;
 }
+
 .clearfix {
   clear: both;
 }
+
 .ranas-esquina {
   height: 480px;
   bottom: 0;
   left: 0;
   position: absolute;
 }
+
 .font-cs {
   font-family: cs;
 }
+
 .comenzar {
   left: 300px;
   position: absolute;
   top: 35%;
 }
+
 .presione {
   left: 300px;
   position: absolute;
   top: 50%;
 }
+
 button {
   display: inline-block;
   box-sizing: content-box;
@@ -69,7 +87,7 @@ button {
   border-radius: 9px;
   font-family: cs;
   font-size: 40px;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   text-align: center;
   text-overflow: clip;
   background: #e8c209;
@@ -87,6 +105,7 @@ button:hover, button.seleccionado {
   padding-top: 15%;
   padding-left: 20%;
 }
+
 .seleccionPuntos {
   padding-top: 10%;
   padding-left: 1%;
@@ -103,21 +122,105 @@ button:hover, button.seleccionado {
   }
 }
 
-progress {
-  /* Important Thing */
-  -webkit-appearance: none;
-  height: 258px;
-  width: 165px;
+.columna {
+  float: left;
+  height: 95vh;
+
+  margin: 10px;
+  &.jugadores {
+    width: 25%;
+    padding-top: 10px;
+  }
+  &.monedas {
+    width: 30%;
+    .fondo-principal;
+    border-radius: 10px;
+  }
+  &.orificios {
+    width: 50%;
+  }
 }
 
-progress::-webkit-progress-bar {
-  background-image: url("../assets/img/desactivado.png");
-  background-color: transparent;
+.seleccionJugadores.jugadores {
+  progress {
+    /* Important Thing */
+    -webkit-appearance: none;
+    height: 258px;
+    width: 165px;
+  }
 
+  progress::-webkit-progress-bar {
+    background-image: url("../assets/img/desactivado.png");
+    background-color: transparent;
+
+  }
+
+  progress::-webkit-progress-value {
+    background-image: url("../assets/img/activado.png");
+    background-color: transparent;
+
+  }
 }
 
-progress::-webkit-progress-value {
-  background-image: url("../assets/img/activado.png");
-  background-color: transparent;
+.jugador {
+  height: 15%;
+  margin: 5px;
 
+  .avatar {
+    height: 100%;
+    float: left;
+    position: relative;
+    top: -10px;
+  }
+
+  .datos {
+
+    padding-left: 80px;
+    padding-top: 3px;
+
+    &.activo {
+      .fondo-principal;
+      width: 232px;
+      padding-right: 24px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    .titulo {
+      font-size: 30px;
+      margin: 5px;
+      color: #ffffff;
+      text-shadow: 3px -3px 0 rgba(15, 73, 168, 0.66);
+    }
+    progress {
+      width: 210px;
+      height: 30px;
+      -webkit-appearance: none;
+    }
+    progress::-webkit-progress-bar {
+      background-color: #ffffff;
+    }
+
+    progress::-webkit-progress-value {
+      background-color: @color-contraste;
+    }
+
+    .puntaje {
+      position: relative;
+      top: -30px;
+      font-size: 35px;
+      line-height: 30px;
+      float: left;
+      padding-left: 5px;
+    }
+
+    .blanqueadas {
+      text-align: right;
+
+      img {
+        height: 20px;
+        margin: 5px;
+      }
+    }
+  }
 }

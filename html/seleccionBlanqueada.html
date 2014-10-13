@@ -3,8 +3,9 @@
         <div class="grande centrar">{{ 'ESCOGE_BLANQUEADA' | translate }}</div>
 
         <botonera max="6" callback="callback" seleccionado="seleccionado">
-            <opcion ng-repeat="blanqueada in blanqueadas" opcion="{{$index + 1}}">{{blanqueada}} {{'PUNTOS' | translate
-                }}
+            <opcion ng-repeat="blanqueada in blanqueadas" opcion="{{$index + 1}}">{{(blanqueada + "").replace("-","menos
+                ")}}
+                {{'PUNTOS' | translate}}
             </opcion>
         </botonera>
         <div class="grande centrar">{{"PRESIONE" | translate}} {{"INICIAR" | translate}}</div>

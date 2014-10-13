@@ -20,8 +20,11 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                 url: '/jugar',
                 template: '<ui-view/>',
                 resolve: {
-                    config: function (ConfiguracionCls) {
-                        return new ConfiguracionCls();
+                    tanda: function (TandaCls) {
+                        return new TandaCls();
+                    },
+                    config: function (tanda) {
+                        return tanda.configuracion;
                     }
                 }
             })
@@ -30,21 +33,36 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                 controller: 'SeleccionEquposCtrl',
                 templateUrl: "html/seleccionEquipos.html"
             })
-            .state('jugar.seleccionPuntos', {
+            .state('jugar.chico', {
+                url: "/chico",
+                template: '<ui-view/>',
+                resolve: {
+                    chico: function (tanda, config) {
+                        return tanda.nuevoChico();
+                    }
+                }
+            })
+            .state('jugar.chico.seleccionPuntos', {
                 url: "/puntos",
                 controller: 'SeleccionPuntosCtrl',
                 templateUrl: "html/seleccionPuntos.html"
             })
-            .state('jugar.seleccionBlanqueada', {
+            .state('jugar.chico.seleccionBlanqueada', {
                 url: "/blanqueadas",
                 controller: 'SeleccionBlanqueadaCtrl',
                 templateUrl: "html/seleccionBlanqueada.html"
             })
-            .state('jugar.seleccionJugadores', {
+            .state('jugar.chico.seleccionJugadores', {
                 url: "/jugadores",
                 controller: 'SeleccionJugadoresCtrl',
                 templateUrl: "html/seleccionJugadores.html"
-            });
+            })
+            .state('jugar.chico.principal', {
+                url: "/frosch",
+                controller: 'PrincipalCtrl',
+                templateUrl: "html/principal.html"
+            })
+        ;
 
 
         hotkeysProvider.includeCheatSheet = false;

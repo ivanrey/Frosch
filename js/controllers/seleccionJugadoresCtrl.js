@@ -10,13 +10,13 @@ angular.module('Frosch')
                 callback: function () {
                     if ($scope.creditosExactos()) {
                         config.setNumJugadores($scope.numJugadores());
-                        $state.go('jugar.principal');
+                        $state.go('jugar.chico.principal');
                     }
                 }
             });
 
         if (!config.puntos)
-            $state.go('jugar.seleccionPuntos');
+            $state.go('jugar.chico.seleccionPuntos');
 
 
         $scope.agregarCredito = function () {
