@@ -5,7 +5,7 @@ angular.module('Frosch')
         $scope.callback = {
             configurar: function configurar(opcion) {
                 config.setMaxPorEquipo(opcion);
-                $state.go('jugar.seleccionPuntos')
+                $state.go('jugar.seleccionBlanqueada')
             }
         };
 

@@ -1,10 +1,22 @@
 <div class="view fondo-laguna font-cs" ng-click="agregarCredito()">
-    <div class="seleccionPuntos columnas-2">
-
-
+    <div class="seleccionJugadores columnas-2">
+        <div ng-show="creditosExactos()" class="grande centrar">{{"PRESIONE" | translate}} {{"INICIAR" | translate}}
+        </div>
+        <div class="centrar jugadores">
+            <progress value="{{creditosJugador(1)}}" max="1"></progress>
+            <progress value="{{creditosJugador(2)}}" max="1"></progress>
+            <progress value="{{creditosJugador(3)}}" max="1"></progress>
+            <progress value="{{creditosJugador(4)}}" max="1"></progress>
+            <progress value="{{creditosJugador(5)}}" max="1"></progress>
+            <progress value="{{creditosJugador(6)}}" max="1"></progress>
+        </div>
         <div class="grande centrar">{{creditos}} {{"CREDITOS" | translate}}</div>
-        <div class="grande centrar">{{"PRESIONE" | translate}} {{"INICIAR" | translate}}</div>
 
+        <div ng-if="creditosFaltantes()" class="mediano centrar">{{"INSERTA" | translate}} {{creditosFaltantes()}}
+            {{"CREDITOS" | translate }}<br>
+            {{ "PARA_X_JUGADORES" |
+            translateReplace:{'numJugadores':siguienteJugador(),'es':siguienteJugador()>1?'es':''} }}
+        </div>
     </div>
 
 </div>

@@ -8,4 +8,15 @@ angular.module('translate', ['pascalprecht.translate'])
 
 
         $translateProvider.preferredLanguage('es-co');
+    })
+    .filter('translateReplace', function ($translate) {
+        return function (translationId, interpolateParams, interpolation) {
+            var traduccion = $translate.instant(translationId, interpolateParams, interpolation);
+            angular.forEach(interpolateParams, function (val, key) {
+                if (traduccion.indexOf('%' + key + '%') !== -1) {
+                    traduccion = traduccion.replace('%' + key + '%', val);
+                }
+            });
+            return traduccion;
+        };
     });

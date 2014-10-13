@@ -8,6 +8,7 @@ angular.module('Frosch')
             var me = this;
             this.equipos = false;
             this.maxPorEquipo = 1;
+            this.puntos = 400;
 
             var httpPromise = $http.get('config/config.json');
             return httpPromise.then(function (httpResponse) {
@@ -20,6 +21,17 @@ angular.module('Frosch')
             this.maxPorEquipo = cantidad;
             if (this.maxPorEquipo > 1)
                 this.equipos = true;
+        };
+
+        clase.prototype.creditosPorJugador = function () {
+            return this.configuracion.creditosPorPuntaje[this.puntos] * this.maxPorEquipo;
+        };
+
+        clase.prototype.setNumJugadores = function (numJugadores) {
+            if (numJugadores !== Math.round(numJugadores))
+                throw new Error("El número de jugadores debe ser exacto");
+
+            this.numJugadores = numJugadores;
         };
 
         return clase;

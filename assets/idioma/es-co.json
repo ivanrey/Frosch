@@ -8,5 +8,6 @@
   "PUNTOS": "Puntos",
   "ESCOGE_PUNTAJE": "Escoge el Puntaje",
   "ESCOGE_BLANQUEADA": "Escoge la Blanqueada",
-  "CREDITOS": "Créditos"
+  "CREDITOS": "Créditos",
+  "PARA_X_JUGADORES": "Para %numJugadores% Jugador%es%"
 }
