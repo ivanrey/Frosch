@@ -1,3 +1,4 @@
+<ui-view>
 <div class="view fondo-laguna font-cs">
     <div class="columna jugadores">
         <jugador ng-repeat="jugador in jugadores" jugador="jugador" maximo="config.puntos"></jugador>
@@ -33,7 +34,7 @@
                     </div>
                     <div class="puntos">
                         <div class="titulo">{{"PUNTOS" | translate}}</div>
-                        <div class="numero">{{chico.jugadorActual.puntos}}</div>
+                        <div class="numero">{{puntaje}}</div>
                     </div>
                 </div>
 
@@ -59,3 +60,4 @@
         </div>
     </div>
 </div>
+</ui-view>

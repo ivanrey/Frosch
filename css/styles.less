@@ -41,6 +41,18 @@ body {
   background: url("../assets/img/fondo-rana.png") no-repeat;
 }
 
+.fondo-rana-premio {
+  background: url("../assets/img/fondo-rana-premio.png") no-repeat;
+}
+
+.fondo-ranita-premio {
+  background: url("../assets/img/fondo-ranita-premio.png") no-repeat;
+}
+
+.fondo-monona {
+  background: url("../assets/img/fondo-monona.png") no-repeat;
+}
+
 .grande {
   font-size: 100px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px #33ff38, 0 0 70px #a1ff7d, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
@@ -329,8 +341,28 @@ button:hover, button.seleccionado {
 
   }
 
-  &rotar {
-    transform: rotateY(360deg);
+  &.rotar {
+    -webkit-transform: rotateY(360deg);
     transition: all 0.5s ease-in-out;
   }
+}
+
+.rana-label {
+  position: absolute;
+  left: 15%;
+  top: 30%;
+}
+
+.fondo-monona .monona-label {
+  background-image: url("http://localhost/assets/img/monona-explosion.png");
+  background-size: contain;
+  width: 966px;
+  height: 768px;
+  -webkit-transform: rotate(-24deg);
+  padding-top: 300px;
+  padding-left: 351px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50px;
+  left: 100px;
 }

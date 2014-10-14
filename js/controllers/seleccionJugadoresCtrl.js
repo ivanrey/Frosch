@@ -6,7 +6,7 @@ angular.module('Frosch')
 
         hotkeys.bindTo($scope)
             .add({
-                combo: 'enter',
+                combo: config.configuracion.keymap.enter,
                 callback: function () {
                     if ($scope.creditosExactos()) {
                         config.setNumJugadores($scope.numJugadores());
@@ -18,6 +18,7 @@ angular.module('Frosch')
         if (!config.puntos)
             $state.go('jugar.chico.seleccionPuntos');
 
+        $scope.config = config;
 
         $scope.agregarCredito = function () {
             $scope.creditos++;

@@ -9,5 +9,6 @@ angular.module('Frosch')
             }
         };
 
+        $scope.config = config;
 
     });

@@ -5,6 +5,7 @@ angular.module('Frosch')
         $scope.seleccionado = 0;
 
         $scope.puntajes = config.configuracion.puntajes;
+        $scope.config = config;
 
         $scope.callback = {
             configurar: function configurar(opcion) {

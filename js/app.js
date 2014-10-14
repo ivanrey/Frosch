@@ -62,6 +62,21 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                 controller: 'PrincipalCtrl',
                 templateUrl: "html/principal.html"
             })
+            .state('jugar.chico.principal.rana', {
+                url: "/rana",
+                controller: 'NotificacionCtrl',
+                templateUrl: "html/rana.html"
+            })
+            .state('jugar.chico.principal.ranita', {
+                url: "/ranita",
+                controller: 'NotificacionCtrl',
+                templateUrl: "html/ranita.html"
+            })
+            .state('jugar.chico.principal.monona', {
+                url: "/monona",
+                controller: 'NotificacionCtrl',
+                templateUrl: "html/monona.html"
+            })
         ;
 
 
