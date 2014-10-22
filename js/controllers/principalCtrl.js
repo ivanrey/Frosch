@@ -33,12 +33,24 @@ angular.module('Frosch')
 
                 if (chico.jugadorActual.monona)
                     $state.go('jugar.chico.principal.monona');
+
+                chico.verificarTurno();
+
+                if (chico.termino)
+                    $state.go('jugar.chico.termino');
+            }
+        };
+
+        $scope.cambiarTurno = function (turno) {
+            this.chico.cambiarTurno(turno);
+            if (this.chico.jugadorAnterior.blanqueado) {
+                $state.go('jugar.chico.principal.blanqueado');
             }
         };
 
 
         // Hotkeys para los orificios
-        var sumarPuntosCk = function (orificio) {
+        var sumarPuntosCk = function sumarPuntosCk(orificio) {
             return function () {
                 return $scope.sumarPuntos(orificio);
             }
@@ -53,5 +65,18 @@ angular.module('Frosch')
             })
         });
 
+        var cambiarTurnoCk = function cambiarTurnoCk(turno) {
+            return function () {
+                $scope.cambiarTurno(turno);
+            }
+        };
+
+        // Hotkeys para cambios de turno
+        for (var i = 1; i <= 6; i++) {
+            hotkeysBound.add({
+                combo: keymap['jugador' + i],
+                callback: cambiarTurnoCk(i)
+            })
+        }
 
     });

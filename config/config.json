@@ -22,6 +22,7 @@
     "2000": 2
   },
   "maxArgollas": 6,
+  "maxBlanqueadas": 3,
   "orificios": [
     10,
     100,
@@ -53,6 +54,13 @@
     "orificio9": "6",
     "orificio10": "7",
     "orificio11": "8",
-    "orificio12": "9"
+    "orificio12": "9",
+    "jugador1": "q",
+    "jugador2": "w",
+    "jugador3": "e",
+    "jugador4": "r",
+    "jugador5": "t",
+    "jugador6": "y"
+
   }
 }

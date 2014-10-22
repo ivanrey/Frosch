@@ -65,17 +65,47 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
             .state('jugar.chico.principal.rana', {
                 url: "/rana",
                 controller: 'NotificacionCtrl',
-                templateUrl: "html/rana.html"
+                templateUrl: "html/rana.html",
+                resolve: {
+                    jugador: function (chico) {
+                        return chico.jugadorActual;
+                    }
+                }
             })
             .state('jugar.chico.principal.ranita', {
                 url: "/ranita",
                 controller: 'NotificacionCtrl',
-                templateUrl: "html/ranita.html"
+                templateUrl: "html/ranita.html",
+                resolve: {
+                    jugador: function (chico) {
+                        return chico.jugadorActual;
+                    }
+                }
             })
             .state('jugar.chico.principal.monona', {
                 url: "/monona",
                 controller: 'NotificacionCtrl',
-                templateUrl: "html/monona.html"
+                templateUrl: "html/monona.html",
+                resolve: {
+                    jugador: function (chico) {
+                        return chico.jugadorActual;
+                    }
+                }
+            })
+            .state('jugar.chico.principal.blanqueado', {
+                url: "/blanqueado",
+                controller: 'NotificacionCtrl',
+                templateUrl: "html/blanqueado.html",
+                resolve: {
+                    jugador: function (chico) {
+                        return chico.jugadorAnterior;
+                    }
+                }
+            })
+            .state('jugar.chico.termino', {
+                url: "/fin",
+                controller: 'FinChicoCtrl',
+                templateUrl: "html/finChico.html"
             })
         ;
 

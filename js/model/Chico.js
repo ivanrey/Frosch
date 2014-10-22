@@ -9,6 +9,7 @@ angular.module('Frosch')
             this.jugadores = [];
             this.turno = 1;
             this.ronda = 1;
+            this.termino = false;
 
         };
 
@@ -28,8 +29,38 @@ angular.module('Frosch')
             if (this.jugadorActual.gano)
                 this.ganadores.push(jugadorActual);
 
+            var activos = 0;
+            for (var i = 0; i < this.jugadores.length; i++) {
+                if (this.jugadores[i].enJuego()) {
+                    activos++
+                }
+            }
+
+            if (activos < 2) // mínimo 2 jugadores para seguir el chico
+                this.termino = true;
+
+        };
+
+        chicoCls.prototype.cambiarTurno = function (turno) {
+            //busqueda del nuevo jugador
+            for (var i = 0; i < this.jugadores.length; i++) {
+                if (this.jugadores[i] === this.jugadorActual) {
+                    this.jugadorAnterior = this.jugadorActual;
+                    do {
+                        this.jugadorActual = this.jugadores[(i + 1) % this.jugadores.length]
+                    } while (!this.jugadorActual.enJuego() && this.jugadorAnterior != this.jugadorActual);
+                    break;
+                }
+            }
+
+
+            this.jugadorAnterior.desactivar();
+
+            this.jugadorActual.activar();
 
         };
 
         return chicoCls;
-    });
+    }
+)
+;
