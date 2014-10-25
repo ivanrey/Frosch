@@ -42,9 +42,14 @@ angular.module('Frosch')
         };
 
         $scope.cambiarTurno = function (turno) {
-            this.chico.cambiarTurno(turno);
-            if (this.chico.jugadorAnterior.blanqueado) {
-                $state.go('jugar.chico.principal.blanqueado');
+            try {
+                this.chico.cambiarTurno(turno);
+                if (this.chico.jugadorAnterior.blanqueado) {
+                    $state.go('jugar.chico.principal.blanqueado');
+                }
+            }
+            catch (e) {
+                console.error(e)
             }
         };
 
@@ -68,6 +73,7 @@ angular.module('Frosch')
         var cambiarTurnoCk = function cambiarTurnoCk(turno) {
             return function () {
                 $scope.cambiarTurno(turno);
+                $state.go('jugar.chico.principal'); //por si esta en rana, ranita o blanqueado
             }
         };
 

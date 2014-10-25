@@ -1,63 +1,63 @@
 <ui-view>
-<div class="view fondo-laguna font-cs">
-    <div class="columna jugadores">
-        <jugador ng-repeat="jugador in jugadores" jugador="jugador" maximo="config.puntos"></jugador>
+    <div class="view fondo-laguna font-cs">
+        <div class="columna jugadores">
+            <jugador ng-repeat="jugador in jugadores" jugador="jugador" maximo="config.puntos"></jugador>
 
-    </div>
-
-    <div class="columna monedas">
-        <div class="datos">
-            <div class="turno">
-                <div class="titulo">{{"TURNO" | translate}}</div>
-                <div class="numero">{{chico.jugadorActual.turno}}</div>
-            </div>
-            <div class="puntos">
-                <div class="titulo">{{"PUNTOS" | translate}}</div>
-                <div class="numero">{{chico.jugadorActual.puntos}}</div>
-            </div>
         </div>
 
-
-        <div class="argollas">
-            <div class="argolla" ng-repeat="argolla in chico.jugadorActual.ultimasArgollas track by $index"
-                 ng-class="{inactiva: !argolla}">
-                {{ argolla || '&nbsp'}}
-            </div>
-        </div>
-
-        <div class="tiros">
-            <div class="tiro" ng-repeat="(tiro, puntaje) in chico.jugadorActual.tiros track by tiro">
-                <div class="datos">
-                    <div class="turno">
-                        <div class="titulo">{{"TURNO" | translate}}</div>
-                        <div class="numero">{{tiro}}</div>
-                    </div>
-                    <div class="puntos">
-                        <div class="titulo">{{"PUNTOS" | translate}}</div>
-                        <div class="numero">{{puntaje}}</div>
-                    </div>
+        <div class="columna monedas">
+            <div class="datos">
+                <div class="turno">
+                    <div class="titulo">{{"TURNO" | translate}}</div>
+                    <div class="numero">{{chico.jugadorActual.turno}}</div>
                 </div>
+                <div class="puntos">
+                    <div class="titulo">{{"PUNTOS" | translate}}</div>
+                    <div class="numero">{{chico.jugadorActual.puntos}}</div>
+                </div>
+            </div>
 
+
+            <div class="argollas">
+                <div class="argolla" ng-repeat="argolla in chico.jugadorActual.ultimasArgollas track by $index"
+                     ng-class="{inactiva: !argolla}">
+                    {{ argolla || '&nbsp'}}
+                </div>
+            </div>
+
+            <div class="tiros">
+                <div class="tiro" ng-repeat="puntaje in chico.jugadorActual.tiros track by $index">
+                    <div class="datos">
+                        <div class="turno">
+                            <div class="titulo">{{"TURNO" | translate}}</div>
+                            <div class="numero">{{$index+1}}</div>
+                        </div>
+                        <div class="puntos">
+                            <div class="titulo">{{"PUNTOS" | translate}}</div>
+                            <div class="numero">{{puntaje}}</div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="columna orificios">
-        <div class="centrar meta">
-            <span>{{"META" | translate}}</span>
+        <div class="columna orificios">
+            <div class="centrar meta">
+                <span>{{"META" | translate}}</span>
 
-            <div class="pequeno">{{config.puntos}} {{"PUNTOS" | translate}}</div>
-        </div>
-        <div class="argollas">
-            <div class="argolla"
-                 ng-repeat="orificio in config.configuracion.orificios track by $index"
-                 ng-class="{
+                <div class="pequeno">{{config.puntos}} {{"PUNTOS" | translate}}</div>
+            </div>
+            <div class="argollas">
+                <div class="argolla"
+                     ng-repeat="orificio in config.configuracion.orificios track by $index"
+                     ng-class="{
                     rana: $index+1==config.configuracion.orificioRana,
                     ranita: $index+1==config.configuracion.orificioRanita
                     }">
-                {{orificio}}
+                    {{orificio}}
+                </div>
             </div>
         </div>
     </div>
-</div>
 </ui-view>

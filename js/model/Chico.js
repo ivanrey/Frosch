@@ -7,9 +7,23 @@ angular.module('Frosch')
         var chicoCls = function (config) {
             this.configuracion = config;
             this.jugadores = [];
-            this.turno = 1;
-            this.ronda = 1;
             this.termino = false;
+
+            this.buscarSiguienteJugador = function buscarSiguienteJugador() {
+                var i = this.numJugadorActual;
+                var nuevoJugador = null;
+                do {
+                    nuevoJugador = this.jugadores[(i + 1) % this.jugadores.length]
+                    i++;
+                } while (!nuevoJugador.enJuego() && nuevoJugador != this.jugadorActual);
+                return nuevoJugador;
+            };
+
+            Object.defineProperty(this, 'numJugadorActual', {
+                get: function () {
+                    return this.jugadorActual.numero - 1;
+                }
+            });
 
         };
 
@@ -26,8 +40,6 @@ angular.module('Frosch')
         };
 
         chicoCls.prototype.verificarTurno = function () {
-            if (this.jugadorActual.gano)
-                this.ganadores.push(jugadorActual);
 
             var activos = 0;
             for (var i = 0; i < this.jugadores.length; i++) {
@@ -39,18 +51,23 @@ angular.module('Frosch')
             if (activos < 2) // mínimo 2 jugadores para seguir el chico
                 this.termino = true;
 
+            if (!this.termino && this.jugadorActual.gano) {
+                this.cambiarTurno(true); // automaticamente activo el siguiente turno
+            }
+
         };
 
         chicoCls.prototype.cambiarTurno = function (turno) {
             //busqueda del nuevo jugador
-            for (var i = 0; i < this.jugadores.length; i++) {
-                if (this.jugadores[i] === this.jugadorActual) {
-                    this.jugadorAnterior = this.jugadorActual;
-                    do {
-                        this.jugadorActual = this.jugadores[(i + 1) % this.jugadores.length]
-                    } while (!this.jugadorActual.enJuego() && this.jugadorAnterior != this.jugadorActual);
-                    break;
-                }
+
+
+            var siguiente = this.buscarSiguienteJugador();
+            if (turno === true || this.jugadores[turno - 1] == siguiente) {
+                this.jugadorAnterior = this.jugadorActual;
+                this.jugadorActual = siguiente;
+
+            } else {
+                throw new Error("El siguiente turno no es " + turno)
             }
 
 

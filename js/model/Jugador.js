@@ -4,15 +4,15 @@ angular.module('Frosch')
         var jugadorCls = function (numero, config) {
             this.numero = numero;
             this.config = config;
-            this.blanqueadas = 3;
-            this.puntos = 170;
+            this.blanqueadas = 0;
+            this.puntos = 0;
             this.activo = false;
 
             this.ultimasArgollas = new Array(this.config.configuracion.maxArgollas);
 
-            this.tiros = {1: 50, 2: -10, 3: 12, 4: 12, 5: 34, 6: 55, 7: 66, 8: 77, 9: 88, 10: 99};
+            this.tiros = [];
 
-            this.turno = 3;
+            this.turno = 0;
         };
 
         jugadorCls.prototype.getBlanqueadasArray = function () {
@@ -90,10 +90,16 @@ angular.module('Frosch')
 
             var puntosTurno = 0;
             for (var i = 0; i < this.ultimasArgollas.length; i++)
-                puntosTurno += this.ultimasArgollas[i];
+                if (this.ultimasArgollas[i])
+                    puntosTurno += this.ultimasArgollas[i];
 
-            this.tiros[Object.keys(this.tiros).length + 1] = puntosTurno;
-            this.ultimasArgollas = new Array(this.config.configuracion.maxArgollas);
+            if (!puntosTurno)
+                puntosTurno = this.config.blanqueada * 1;
+
+            if (this.turno) {
+                this.tiros.push(puntosTurno);
+                this.ultimasArgollas = new Array(this.config.configuracion.maxArgollas);
+            }
             this.turno++;
             this.activo = true;
 

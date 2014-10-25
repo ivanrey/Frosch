@@ -36,7 +36,7 @@ angular.module('Frosch')
         };
 
         $scope.creditosExactos = function () {
-            return $scope.creditos && Math.round($scope.numJugadores()) === $scope.numJugadores();
+            return $scope.creditos && Math.round($scope.numJugadores()) === $scope.numJugadores() && $scope.numJugadores() > 1;
         };
 
         $scope.creditosFaltantes = function () {

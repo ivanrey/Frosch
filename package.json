@@ -1,7 +1,7 @@
 {
   "name": "frosch",
   "version": "0.0.1",
-  "main": "main.html",
+  "main": "main.html#/jugar/chico/frosch",
   "window":{
     "kiosk": false,
     "width": 1280,
