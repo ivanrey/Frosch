@@ -1,7 +1,9 @@
 <div class="jugador">
+
     <img class="avatar" ng-src="assets/img/{{jugador.activo && !jugador.terminoTurno?'activado':'desactivado'}}.png"/>
 
     <div class="datos" ng-class="{activo: jugador.activo}">
+
         <div class="titulo">{{"JUGADOR" | translate}} {{jugador.numero}}</div>
         <progress value="{{jugador.puntos}}" max="{{maximo}}"></progress>
         <div class="puntaje">{{jugador.puntos}}</div>
@@ -10,5 +12,7 @@
                  src="assets/img/blanqueada.png"/>
 
         </div>
+        <span class="ronda pequeno" ng-if="jugador.equipo && jugador.activo">{{ jugador.codigoRonda()}}</span>
+
     </div>
 </div>

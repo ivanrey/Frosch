@@ -6,10 +6,10 @@ angular.module('Frosch')
 
         var clase = function () {
             var me = this;
-            this.equipos = false;
-            this.maxPorEquipo = 1;
+            this.equipos = true;
+            this.maxPorEquipo = 3;
             this.puntos = 800;
-            this.numJugadores = 2;
+            this.numJugadores = 3;
             this.blanqueada = -10;
 
             var httpPromise = $http.get('config/config.json');
@@ -20,9 +20,8 @@ angular.module('Frosch')
         };
 
         clase.prototype.setMaxPorEquipo = function (cantidad) {
-            this.maxPorEquipo = cantidad;
-            if (this.maxPorEquipo > 1)
-                this.equipos = true;
+            this.maxPorEquipo = cantidad * 1;
+            this.equipos = this.maxPorEquipo > 1;
         };
 
         clase.prototype.creditosPorJugador = function () {

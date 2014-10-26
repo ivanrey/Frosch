@@ -13,6 +13,12 @@ angular.module('Frosch')
             this.tiros = [];
 
             this.turno = 0;
+
+            this.equipo = config.equipos;
+
+            if (this.equipo) {
+                this.ronda = -1; //al activarse la primera vez queda en 0
+            }
         };
 
         jugadorCls.prototype.getBlanqueadasArray = function () {
@@ -103,12 +109,20 @@ angular.module('Frosch')
             this.turno++;
             this.activo = true;
 
+            if (this.equipo) {
+                this.ronda = (this.ronda + 1) % this.config.maxPorEquipo;
+            }
+
         };
 
         jugadorCls.prototype.desactivar = function () {
             this.activo = false;
             this.terminoTurno = true;
             this.verificarBlanqueada();
+        };
+
+        jugadorCls.prototype.codigoRonda = function () {
+            return String.fromCharCode(this.ronda + 65);
         };
 
         return jugadorCls;
