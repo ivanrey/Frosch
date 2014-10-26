@@ -2,7 +2,7 @@ angular.module('translate', ['pascalprecht.translate'])
     .config(function ($translateProvider) {
 
         $translateProvider.useStaticFilesLoader({
-            prefix: 'assets/idioma/',
+            prefix: 'assets/lang/',
             suffix: '.json'
         });
 

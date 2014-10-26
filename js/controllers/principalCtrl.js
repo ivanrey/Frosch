@@ -36,12 +36,15 @@ angular.module('Frosch')
 
                 chico.verificarTurno();
 
-                if (chico.termino)
-                    $state.go('jugar.chico.termino');
+
             }
         };
 
         $scope.cambiarTurno = function (turno) {
+
+            if ($state.current.name != 'jugar.chico.principal')
+                return; //por ahora no se cambia de turno en notificaciones
+
             try {
                 this.chico.cambiarTurno(turno);
                 if (this.chico.jugadorAnterior.blanqueado) {
@@ -73,7 +76,6 @@ angular.module('Frosch')
         var cambiarTurnoCk = function cambiarTurnoCk(turno) {
             return function () {
                 $scope.cambiarTurno(turno);
-                $state.go('jugar.chico.principal'); //por si esta en rana, ranita o blanqueado
             }
         };
 

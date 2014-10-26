@@ -33,16 +33,23 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                 controller: 'SeleccionEquposCtrl',
                 templateUrl: "html/seleccionEquipos.html"
             })
+            .state('jugar.nuevoChico', {
+                url: "/nuevo",
+                controller: function ($state, tanda) {
+                    tanda.nuevoChico();
+                    $state.go('jugar.chico.seleccionBlanqueada');
+                },
+                template: ""
+            })
             .state('jugar.chico', {
                 url: "/chico",
                 template: '<ui-view/>',
                 resolve: {
                     chico: function (tanda, config) {
-                        return tanda.nuevoChico();
+                        return tanda.chicoActual;
                     }
                 }
-            })
-            .state('jugar.chico.seleccionPuntos', {
+            }).state('jugar.chico.seleccionPuntos', {
                 url: "/puntos",
                 controller: 'SeleccionPuntosCtrl',
                 templateUrl: "html/seleccionPuntos.html"
@@ -92,6 +99,16 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                     }
                 }
             })
+            .state('jugar.chico.principal.ganaste', {
+                url: "/ganaste",
+                controller: 'NotificacionCtrl',
+                templateUrl: "html/ganaste.html",
+                resolve: {
+                    jugador: function (chico) {
+                        return chico.jugadorActual;
+                    }
+                }
+            })
             .state('jugar.chico.principal.blanqueado', {
                 url: "/blanqueado",
                 controller: 'NotificacionCtrl',
@@ -102,7 +119,7 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                     }
                 }
             })
-            .state('jugar.chico.termino', {
+            .state('jugar.chico.principal.termino', {
                 url: "/fin",
                 controller: 'FinChicoCtrl',
                 templateUrl: "html/finChico.html"

@@ -8,8 +8,6 @@
 @blanco: #eee;
 @fondo-suave: @fondo-principal + 30;
 
-
-
 .cuadrado(@ancho) {
   height: @ancho;
   width: @ancho;
@@ -34,6 +32,7 @@ body {
 .fondo-principal {
   background-color: @fondo-principal;
 }
+
 .fondo-laguna {
   background: url("../assets/img/fondo-laguna.png") no-repeat;
 }
@@ -89,6 +88,10 @@ body {
   bottom: 0;
   left: 0;
   position: absolute;
+  &.derecha {
+    left: auto;
+    right: 0;
+  }
 }
 
 .font-cs {
@@ -96,15 +99,15 @@ body {
 }
 
 .comenzar {
-  left: 300px;
-  position: absolute;
-  top: 35%;
+  padding-top: 10%;
 }
 
 .presione {
-  left: 300px;
-  position: absolute;
-  top: 50%;
+  padding-top: 5%;
+}
+
+.colorContraste {
+  color: @color-contraste;
 }
 
 button {
@@ -340,6 +343,18 @@ button:hover, button.seleccionado {
   }
 }
 
+.blanqueado {
+  .rana-label {
+    top: 60%;
+    left: 7%;
+
+  }
+  img {
+    padding-top: 4%;
+    padding-left: 19%;
+  }
+}
+
 .argolla {
   border: solid 5px white;
   background: @blanco;
@@ -381,4 +396,49 @@ button:hover, button.seleccionado {
   position: absolute;
   top: 50px;
   left: 100px;
+}
+
+.finChico {
+  padding-top: 2%;
+
+  .mediano {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  ul {
+    li {
+      list-style-type: none;
+
+      .jugador {
+        float: left;
+        clear: left;
+        padding-left: 10%;
+      }
+
+      .chicosPerdidos {
+        float: right;
+        padding-right: 40%;
+        clear: right;
+        color: @color-contraste;
+        font-size: 150%;
+      }
+
+    }
+  }
+
+  .continuar {
+    padding-right: 20%;
+    padding-left: 10%;
+    padding-top: 2%;
+
+    .botones {
+      padding-left: 10%;
+      button {
+        width: 150px;
+        margin: 10px;
+      }
+    }
+  }
+
 }

@@ -1,1 +1,29 @@
-{{ "FIN_CHICO" | translateReplace:{numChico:numChico} }}
+<div class="view fondo-laguna">
+    <div class=" font-cs finChico">
+
+        <div class="grande centrar">
+            {{ "FIN_CHICO" | translateReplace:{numChico:numChico} }}
+        </div>
+
+        <div class="mediano centrar colorContraste">
+            {{ "CHICOS_PERDIDOS" | translate }}
+
+        </div>
+        <ul class="centrar mediano">
+            <li ng-repeat="participante in tanda.participantes">
+                <span class="jugador">{{"JUGADOR_NUM" | translateReplace:{numero:participante.numero} }}</span>
+                <span class="chicosPerdidos">{{participante.chicosPerdidos}}</span>
+            </li>
+        </ul>
+
+        <div class="grande clearfix continuar">
+            <span class="texto">{{ "CONTINUAR" | translate }}</span>
+            <botonera max="2" callback="callback" seleccionado="seleccionado" keymap="config.configuracion.keymap">
+                <opcion opcion="1">{{ "SI" | translate}}</opcion>
+                <opcion opcion="2">{{ "NO" | translate}}</opcion>
+            </botonera>
+        </div>
+    </div>
+    <img src="assets/img/rana-felicitaciones.png" class="ranas-esquina derecha"/>
+
+</div>
