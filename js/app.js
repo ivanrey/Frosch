@@ -129,7 +129,7 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
 
         hotkeysProvider.includeCheatSheet = false;
     }).
-    run(function ($rootScope) {
+    run(function ($rootScope, hotkeys) {
 
         /**
          * Debugging Tools
@@ -144,4 +144,17 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
         };
 
         $rootScope.creditos = 0; // así no deben perderse nunca créditos
+
+        hotkeys.bindTo($rootScope)
+            .add({
+                combo: 's s s',
+                callback: function () {
+                    // Cargar node-webkit
+                    var gui = require('nw.gui');
+
+                    // Salir
+                    gui.App.quit();
+
+                }
+            })
     });
