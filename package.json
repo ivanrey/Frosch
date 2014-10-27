@@ -5,15 +5,15 @@
         "windows": true,
         "mac": false,
         "nw_version": "0.11.0-rc1",
-        "force_download": false,
+        "force_download": false, 
         "linux-x64": false
     },
     "name": "Frosch",
     "nodejs": true,
-    "description": "Frosch software para juego de rana electr\u00f3nica",
+    "description": "Frosch software para juego de rana electr\u00f3nica", 
     "single-instance": true, 
     "keywords": [
-        "rana",
+        "rana", 
         "electronica", 
         "juego"
     ], 
@@ -33,16 +33,16 @@
         "visible": true,
         "min_width": 1280,
         "position": "center",
-        "show_in_taskbar": false,
+        "show_in_taskbar": false, 
         "toolbar": false, 
         "icon": "icono.png"
-    },
+    }, 
     "version": "0.1.0", 
     "webkit": {
-        "page-cache": true,
+        "page-cache": true, 
         "java": false, 
         "plugin": false
-    },
+    }, 
     "main": "main.html", 
     "node-main": ""
 }
