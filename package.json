@@ -1,22 +1,22 @@
 {
     "webexe_settings": {
-        "linux-x32": true,
+        "linux-x32": false,
         "download_dir": "/Users/ivan/Downloads/Web2Executable.app/Contents/MacOS/files/downloads",
         "windows": true,
-        "mac": true,
+        "mac": false,
         "nw_version": "0.11.0-rc1",
         "force_download": false,
-        "linux-x64": true
+        "linux-x64": false
     },
     "name": "Frosch",
     "nodejs": true,
     "description": "Frosch software para juego de rana electr\u00f3nica",
-    "single-instance": true,
+    "single-instance": true, 
     "keywords": [
         "rana",
-        "electronica",
+        "electronica", 
         "juego"
-    ],
+    ], 
     "window": {
         "max_height": 768,
         "fullscreen": true,
@@ -34,15 +34,15 @@
         "min_width": 1280,
         "position": "center",
         "show_in_taskbar": false,
-        "toolbar": false,
+        "toolbar": false, 
         "icon": "icono.png"
     },
-    "version": "0.1.0",
+    "version": "0.1.0", 
     "webkit": {
         "page-cache": true,
-        "java": false,
+        "java": false, 
         "plugin": false
     },
-    "main": "main.html",
+    "main": "main.html", 
     "node-main": ""
 }
