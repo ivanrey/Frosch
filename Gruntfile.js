@@ -3,17 +3,31 @@
  */
 module.exports = function (grunt) {
 
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         nodewebkit: {
             options: {
                 appName: 'Frosch',
                 platforms: ['win'],
+                dontMerge: true,
                 buildDir: './bin' // Where the build version of my node-webkit app is saved
             },
             src: [
+                './main.html',
+                './package.json',
+                './README.md',
+                './LICENSE',
                 './assets/**/*',
-                './components/**/*',
+
+                './components/jquery/dist/jquery.js',
+                './components/less/dist/less-1.7.5.js',
+                './components/angular/angular.js',
+                './components/angular-translate/angular-translate.js',
+                './components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+                './components/angular-ui-router/release/angular-ui-router.js',
+                './components/angular-hotkeys/build/hotkeys.js',
+
                 './config/**/*',
                 './css/**/*',
                 './html/**/*',
@@ -22,6 +36,6 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-node-webkit-builder');
+    grunt.task.loadTasks('./tasks');
 
 };

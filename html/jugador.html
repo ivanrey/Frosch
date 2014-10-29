@@ -6,7 +6,7 @@
 
         <div class="titulo">{{"JUGADOR" | translate}} {{jugador.numero}}</div>
         <progress value="{{jugador.puntos}}" max="{{maximo}}"></progress>
-        <div class="puntaje">{{jugador.puntos}}</div>
+        <div class="puntaje font-sofachrome">{{jugador.puntos}}</div>
         <div class="blanqueadas">
             <img ng-repeat="blanqueada in jugador.getBlanqueadasArray() track by $index"
                  src="assets/img/blanqueada.png"/>
