@@ -69,6 +69,8 @@ angular.module('Frosch')
                 if (this.ultimasArgollas[i] == this.config.configuracion.orificios[this.config.configuracion.orificioRana - 1]
                     || this.ultimasArgollas[i] == this.config.configuracion.orificios[this.config.configuracion.orificioRanita - 1])
                     ranaORanita = true;
+                else if (this.config.configuracion.mononaSinRepetirOrificio && this.ultimasArgollas.indexOf(this.ultimasArgollas[i]) != i)
+                    return false; //orificio repetido
             }
             //si no retorno todas estan llenas
             return ranaORanita;

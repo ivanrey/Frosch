@@ -39,6 +39,7 @@
   ],
   "orificioRana": 2,
   "orificioRanita": 5,
+  "mononaSinRepetirOficio": true,
   "keymap": {
     "arriba": "up",
     "abajo": "down",
