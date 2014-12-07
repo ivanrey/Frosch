@@ -34,7 +34,7 @@ angular.module('Frosch')
                 if (chico.jugadorActual.monona)
                     $state.go('jugar.chico.principal.monona');
 
-                if (chico.jugadorActual.gano)
+                else if (chico.jugadorActual.gano)
                     $state.go('jugar.chico.principal.ganaste');
 
 
