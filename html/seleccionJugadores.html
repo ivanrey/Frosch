@@ -14,8 +14,9 @@
 
         <div ng-if="creditosFaltantes()" class="mediano centrar">{{"INSERTA" | translate}} {{creditosFaltantes()}}
             {{"CREDITOS" | translate }}<br>
-            {{ "PARA_X_JUGADORES" |
-            translateReplace:{'numJugadores':siguienteJugador(),'es':siguienteJugador()>1?'es':''} }}
+            {{ config.equipos?"PARA_X_EQUIPOS":"PARA_X_JUGADORES" |
+            translateReplace:{'numJugadores':siguienteJugador(),'es':siguienteJugador()>1?(config.equipos?'s':'es'):''}
+            }}
         </div>
     </div>
 
