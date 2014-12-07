@@ -129,7 +129,7 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
 
         hotkeysProvider.includeCheatSheet = false;
     }).
-    run(function ($rootScope, hotkeys) {
+    run(function ($rootScope, hotkeys, audio) {
 
         /**
          * Debugging Tools
@@ -145,6 +145,8 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
 
         $rootScope.creditos = 0; // así no deben perderse nunca créditos
 
+        var monedaAudio = new audio('assets/sounds/moneda.ogg');
+
         hotkeys.bindTo($rootScope)
             .add({
                 combo: 's s s',
@@ -155,6 +157,14 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                     // Salir
                     gui.App.quit();
 
+                }
+            })
+            .add({
+                combo: 'c',
+                callback: function () {
+                    $rootScope.creditos++;
+
+                    monedaAudio.play();
                 }
             })
     });
