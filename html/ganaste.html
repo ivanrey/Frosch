@@ -2,7 +2,7 @@
     <img src="assets/img/ranas-esquina.png" class="ranas-esquina"></span>
 
     <div class="grande centrar">
-        {{'JUGADOR_NUM' | translateReplace:{numero: jugador.numero} }}
+        {{(config.equipos?'EQUIPO_NUM':'JUGADOR_NUM') | translateReplace:{numero: jugador.numero} }}
 
     </div>
     <div class="grande centrar colorContraste">{{"GANASTE" | translate}}

@@ -4,7 +4,7 @@
 
     <div class="datos" ng-class="{activo: jugador.activo}">
 
-        <div class="titulo">{{"JUGADOR" | translate}} {{jugador.numero}}</div>
+        <div class="titulo">{{ (jugador.equipo?"EQUIPO":"JUGADOR") | translate}} {{jugador.numero}}</div>
         <progress value="{{jugador.puntos}}" max="{{maximo}}"></progress>
         <div class="puntaje">{{jugador.puntos}}</div>
         <div class="blanqueadas">

@@ -11,7 +11,7 @@
         </div>
         <ul class="centrar mediano">
             <li ng-repeat="participante in tanda.participantes">
-                <span class="jugador">{{"JUGADOR_NUM" | translateReplace:{numero:participante.numero} }}</span>
+                <span class="jugador">{{ config.equipos?"EQUIPO_NUM":"JUGADOR_NUM" | translateReplace:{numero:participante.numero} }}</span>
                 <span class="chicosPerdidos">{{participante.chicosPerdidos}}</span>
             </li>
         </ul>
