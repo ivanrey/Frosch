@@ -1,8 +1,6 @@
 angular.module('Frosch')
     .controller('SeleccionJugadoresCtrl',
-    function ($scope, $state, config, audio, hotkeys) {
-
-        var monedaAudio = new audio('assets/sounds/moneda.ogg');
+    function ($scope, $rootScope, $state, config, hotkeys) {
 
         hotkeys.bindTo($scope)
             .add({
@@ -10,6 +8,7 @@ angular.module('Frosch')
                 callback: function () {
                     if ($scope.creditosExactos()) {
                         config.setNumJugadores($scope.numJugadores());
+                        $rootScope.creditos = 0;
                         $state.go('jugar.chico.principal');
                     }
                 }
@@ -19,13 +18,6 @@ angular.module('Frosch')
             $state.go('jugar.chico.seleccionPuntos');
 
         $scope.config = config;
-
-        $scope.agregarCredito = function () {
-            $scope.creditos++;
-
-            monedaAudio.play();
-
-        };
 
         $scope.numJugadores = function () {
             return $scope.creditos / config.creditosPorJugador();
