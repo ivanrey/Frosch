@@ -9,8 +9,8 @@
   "ESCOGE_PUNTAJE": "Escoge el Puntaje",
   "ESCOGE_BLANQUEADA": "Escoge la Blanqueada",
   "NUM_CREDITOS": "llevas %numCreditos% crédito%s%",
-  "PARA_X_JUGADORES": "Para %numJugadores% Jugador%es%",
-  "PARA_X_EQUIPOS": "Para %numJugadores% Equipo%es%",
+  "PARA_X_JUGADORES": "Inserta %numCreditos% para un jugador más",
+  "PARA_X_EQUIPOS": "Inserta %numCreditos% para un equipo más",
   "JUGADOR": "Jugador",
   "EQUIPO": "Equipo",
   "JUGADOR_NUM": "Jugador %numero%",
@@ -25,5 +25,6 @@
   "SI": "Sí",
   "NO": "No",
   "CONTINUAR": "¿Continuar?",
-  "GANASTE": "¡Ganaste!"
+  "GANASTE": "¡Ganaste!",
+  "INSERTA": "Inserta %numCreditos% para un "
 }
