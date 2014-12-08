@@ -11,7 +11,9 @@
             <progress value="{{creditosJugador(5)}}" max="1"></progress>
             <progress value="{{creditosJugador(6)}}" max="1"></progress>
         </div>
-        <div class="grande centrar">{{creditos}} {{"CREDITOS" | translate}}</div>
+        <div class="grande centrar"> {{"NUM_CREDITOS" | translateReplace:{'numCreditos': creditos,
+            's':creditos==1?'':'s'} }}
+        </div>
 
         <div ng-if="creditosFaltantes()" class="mediano centrar">{{"INSERTA" | translate}} {{creditosFaltantes()}}
             {{"CREDITOS" | translate }}<br>
