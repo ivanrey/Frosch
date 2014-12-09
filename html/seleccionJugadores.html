@@ -19,6 +19,8 @@
             {{ config.equipos?"PARA_X_EQUIPOS":"PARA_X_JUGADORES" | translateReplace:{ numCreditos: creditosFaltantes()}
             }}
         </div>
+
+        <button class="inicio" ng-click="iniciar()" ng-show="creditosExactos()">{{"INICIAR" | translate}}</button>
     </div>
 
 </div>
