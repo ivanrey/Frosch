@@ -2,16 +2,19 @@ angular.module('Frosch')
     .controller('SeleccionJugadoresCtrl',
     function ($scope, $rootScope, $state, config, hotkeys) {
 
+
+        $scope.iniciar = function () {
+            if ($scope.creditosExactos()) {
+                config.setNumJugadores($scope.numJugadores());
+                $rootScope.creditos -= $scope.numJugadores() * config.creditosPorJugador();
+                $state.go('jugar.chico.principal');
+            }
+        };
+
         hotkeys.bindTo($scope)
             .add({
                 combo: config.configuracion.keymap.enter,
-                callback: function () {
-                    if ($scope.creditosExactos()) {
-                        config.setNumJugadores($scope.numJugadores());
-                        $rootScope.creditos = 0;
-                        $state.go('jugar.chico.principal');
-                    }
-                }
+                callback: $scope.iniciar
             });
 
         if (!config.puntos)
@@ -20,7 +23,7 @@ angular.module('Frosch')
         $scope.config = config;
 
         $scope.numJugadores = function () {
-            return $scope.creditos / config.creditosPorJugador();
+            return Math.min($scope.creditos / config.creditosPorJugador(), 6);
         };
 
         $scope.creditosJugador = function (numJugador) {
