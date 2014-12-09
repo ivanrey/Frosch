@@ -8,6 +8,7 @@ angular.module('Frosch')
 
         $scope.config = chico.configuracion;
 
+        $scope.primerGanador = chico.ganadores[0];
         $scope.callback = {
             configurar: function configurar(opcion) {
 

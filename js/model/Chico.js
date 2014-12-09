@@ -7,6 +7,7 @@ angular.module('Frosch')
         var chicoCls = function (config) {
             this.configuracion = config;
             this.jugadores = [];
+            this.ganadores = [];
             this.termino = false;
 
             this.buscarSiguienteJugador = function buscarSiguienteJugador() {
@@ -41,6 +42,10 @@ angular.module('Frosch')
 
         chicoCls.prototype.verificarTurno = function () {
 
+            if (this.jugadorActual.gano) {
+                this.ganadores.push(this.jugadorActual);
+            }
+
             var activos = 0;
             for (var i = 0; i < this.jugadores.length; i++) {
                 if (this.jugadores[i].enJuego()) {
@@ -49,10 +54,11 @@ angular.module('Frosch')
             }
 
             if (activos < 2) // mínimo 2 jugadores para seguir el chico
+            {
                 this.termino = true;
-
-            if (!this.termino && this.jugadorActual.gano) {
-                this.cambiarTurno(true); // automaticamente activo el siguiente turno
+                if (!this.termino && this.jugadorActual.gano) {
+                    this.cambiarTurno(true); // automaticamente activo el siguiente turno
+                }
             }
 
         };
