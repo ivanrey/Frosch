@@ -23,11 +23,11 @@
   ],
   "window": {
     "max_height": 768,
-    "fullscreen": false,
+    "fullscreen": true,
     "resizable": false,
     "title": "Frosch",
     "always-on-top": true,
-    "frame": true,
+    "frame": false,
     "kiosk": false,
     "max_width": 1280,
     "height": 768,
