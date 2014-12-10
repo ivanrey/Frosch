@@ -167,4 +167,10 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                     monedaAudio.play();
                 }
             })
+            .add({
+                combo: 'backspace',
+                callback: function (event) {
+                    event.preventDefault();
+                }
+            })
     });
