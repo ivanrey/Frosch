@@ -2,3 +2,4 @@ components
 bin
 node_modules
 cache
+.idea
