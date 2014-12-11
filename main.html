@@ -56,7 +56,10 @@
 
 </head>
 <body ng-app="Frosch">
-<div class="creditos font-cs" ng-show="creditos > 0"><img src="assets/img/credito.png"> {{ creditos }}</div>
-<ui-view></ui-view>
+<div class="espacio">
+    <div class="creditos font-cs" ng-show="creditos > 0"><img src="assets/img/credito.png"> {{ creditos }}</div>
+    <ui-view></ui-view>
+</div>
+
 </body>
 </html>
