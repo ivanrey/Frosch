@@ -9,7 +9,7 @@ angular.module('Frosch')
             this.equipos = true;
             this.maxPorEquipo = 3;
             this.puntos = 800;
-            this.numJugadores = 3;
+            this.numJugadores = 6;
             this.blanqueada = -10;
 
             var httpPromise = $http.get('config/config.json');
