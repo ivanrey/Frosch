@@ -2,6 +2,9 @@ angular.module('Frosch')
     .controller('PrincipalCtrl',
     function ($scope, $state, chico, config, hotkeys, audio) {
 
+        if ($scope.configurarAudio) //en pruebas arranca aca de una entonces no esta el audio activo
+            $scope.configurarAudio.stop();
+
         var lanzamientoAudio = new audio("assets/sounds/lanzamiento.ogg");
         var keymap = config.configuracion.keymap;
         $scope.jugadores = chico.getJugadores();

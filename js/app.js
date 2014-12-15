@@ -19,6 +19,7 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
             .state('jugar', {
                 url: '/jugar',
                 template: '<ui-view/>',
+              controller: 'JugarCtrl',
                 resolve: {
                     tanda: function (TandaCls) {
                         return new TandaCls();
@@ -38,6 +39,8 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                 controller: function ($state, tanda) {
                     tanda.nuevoChico();
                     $state.go('jugar.chico.seleccionBlanqueada');
+                    if ($scope.configurarAudio)
+                        $scope.configurarAudio.play();
                 },
                 template: ""
             })

@@ -1,20 +1,25 @@
 angular.module('Frosch')
-    .factory('audio', function () {
+  .factory('audio', function () {
 
 
-        var audioClass = function (audio) {
-            this.audio = new Audio();
-            this.audio.src = audio;
-            this.audio.preload = true;
-        };
+    var audioClass = function (audio) {
+      this.audio = new Audio();
+      this.audio.src = audio;
+      this.audio.preload = true;
+    };
 
-        audioClass.prototype.play = function () {
-            this.audio.currentTime = 0;
+    audioClass.prototype.play = function () {
+      this.audio.currentTime = 0;
 
-            this.audio.pause();
-            this.audio.play();
-        };
+      this.audio.pause();
+      this.audio.play();
+    };
 
-        return audioClass;
+    audioClass.prototype.stop = function () {
+      this.audio.currentTime = 0;
+      this.audio.pause();
+    };
 
-    });
+    return audioClass;
+
+  });
