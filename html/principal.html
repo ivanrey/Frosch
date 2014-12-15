@@ -1,7 +1,8 @@
 <ui-view>
     <div class="view fondo-laguna font-cs">
         <div class="columna jugadores">
-            <jugador ng-repeat="jugador in jugadores" jugador="jugador" maximo="config.puntos"></jugador>
+            <jugador ng-repeat="jugador in jugadores" jugador="jugador" maximo="config.puntos"
+                     ng-click="cambiarTurno(jugador.numero)"></jugador>
 
         </div>
 
