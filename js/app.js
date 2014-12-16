@@ -36,7 +36,7 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
             })
             .state('jugar.nuevoChico', {
                 url: "/nuevo",
-                controller: function ($state, tanda) {
+                controller: function ($scope, $state, tanda) {
                     tanda.nuevoChico();
                     $state.go('jugar.chico.seleccionBlanqueada');
                     if ($scope.configurarAudio)
