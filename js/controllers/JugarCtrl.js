@@ -4,6 +4,7 @@ angular.module('Frosch')
 
     $scope.configurarAudio = new audio("assets/sounds/configurar.ogg");
     $scope.configurarAudio.audio.loop = true;
+
     $scope.configurarAudio.play();
 
   });
