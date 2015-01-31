@@ -61,6 +61,10 @@ angular.module('Frosch')
         };
 
         jugadorCls.prototype.validarMonona = function (puntos) {
+
+            if(!this.config.monona)
+                return false; //moñona no activada
+
             var ranaORanita = false;
             for (var i = 0; i < this.ultimasArgollas.length; i++) {
                 if (this.ultimasArgollas[i] == null) {
