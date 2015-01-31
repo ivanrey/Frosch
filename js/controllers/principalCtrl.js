@@ -31,10 +31,10 @@ angular.module('Frosch')
                 if (orificio == config.configuracion.orificioRana)
                     $state.go('jugar.chico.principal.rana');
 
-                if (orificio == config.configuracion.orificioRanita)
+                else if (orificio == config.configuracion.orificioRanita)
                     $state.go('jugar.chico.principal.ranita');
 
-                if (chico.jugadorActual.monona)
+                else if (chico.jugadorActual.monona)
                     $state.go('jugar.chico.principal.monona');
 
                 else if (chico.jugadorActual.gano)
