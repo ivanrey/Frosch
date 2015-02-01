@@ -7,6 +7,12 @@ var fs = require('fs');
 var DecompressZip = require('decompress-zip');
 
 
+function toCamelcase(str) {
+    return str.replace(/\_+([a-z])/g, function (x, chr) {
+        return chr.toUpperCase();
+    });
+}
+
 //Sobrecarga del metodo de merge para capturar el zip
 NwBuilder.prototype.mergeAppFiles = function () {
     var self = this,
@@ -14,34 +20,37 @@ NwBuilder.prototype.mergeAppFiles = function () {
 
     this._forEachPlatform(function (name, platform) {
         // We copy the app files if we are on mac and don't force zip
-        if (name === 'osx') {
+        if(name === 'osx32' || name === 'osx64') {
+
             // no zip, copy the files
-            if (!self.options.macZip) {
+            if(!self.options.macZip) {
                 self._files.forEach(function (file) {
-                    var dest = path.resolve(platform.releasePath, self.options.appName + '.app', 'Contents', 'Resources', 'app.nw', file.dest);
-                    copiedFiles.push(Utils.copyFile(file.src, dest));
+                    var dest = path.resolve(self.getResourcesDirectoryPath(platform), 'app.nw', file.dest);
+
+                    if(file.dest === 'package.json' && platform.platformSpecificManifest){
+                        copiedFiles.push(self.writePlatformSpecificManifest(platform, dest));
+                    }
+                    else {
+                        copiedFiles.push(Utils.copyFile(file.src, dest, self));
+                    }
                 });
             } else {
                 // zip just copy the app.nw
-                copiedFiles.push(Utils.copyFile(self._nwFile, path.resolve(platform.releasePath, self.options.appName + '.app', 'Contents', 'Resources', 'nw.icns')));
+                copiedFiles.push(Utils.copyFile(
+                    self.getZipFile(name),
+                    path.resolve(self.getResourcesDirectoryPath(platform), 'app.nw'),
+                    self
+                ));
             }
         } else {
-            if (!self.options.dontMerge) {
-                // We cat the app.nw file into the .exe / nw
-                copiedFiles.push(Utils.mergeFiles(path.resolve(platform.releasePath, _.first(platform.files)), self._nwFile), platform.chmod);
-            } else {
-                copiedFiles.push(Utils.copyFile(self._nwFile, path.resolve(platform.releasePath, 'app.zip')));
-            }
+            // We cat the app.nw file into the .exe / nw
+            copiedFiles.push(Utils.copyFile(self.getZipFile(name), path.resolve(platform.releasePath, 'app.zip')));
+
         }
     });
+
     return Promise.all(copiedFiles);
 };
-
-function toCamelcase(str) {
-    return str.replace(/\_+([a-z])/g, function (x, chr) {
-        return chr.toUpperCase();
-    });
-}
 
 function addPlatform(opts, p) {
     var ps = opts['platforms'] = opts['platforms'] || [];
@@ -92,6 +101,7 @@ module.exports = function (grunt) {
         });
         nwOptions.files = this.filesSrc;
 
+        console.log(nwOptions);
         // create and run nwbuilder
         var nw = new NwBuilder(nwOptions);
 
@@ -132,7 +142,7 @@ module.exports = function (grunt) {
 
             })
             .then(function () {
-                grunt.log.ok('nodewebkit app created.');
+                grunt.log.ok('NW.js app created.');
                 done();
             })
             .catch(function (err) {

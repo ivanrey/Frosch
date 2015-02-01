@@ -46,8 +46,7 @@
     "plugin": false
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "node-webkit-builder": "^0.1.4",
+    "grunt": ">=0.4.5",
     "decompress-zip": "0.0.8"
   },
   "main": "main.html",
@@ -59,7 +58,9 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-webkit-builder": "^1.0.8"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
