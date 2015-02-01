@@ -22,12 +22,12 @@
     "juego"
   ],
   "window": {
-    "fullscreen": false,
+    "fullscreen": true,
     "resizable": false,
     "title": "Frosch",
     "always-on-top": true,
-    "frame": true,
-    "kiosk": false,
+    "frame": false,
+    "kiosk": true,
     "height": 768,
     "min_height": 768,
     "width": 1280,
