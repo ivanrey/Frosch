@@ -92,4 +92,13 @@ angular.module('Frosch')
             })
         }
 
+        //para poder terminar temprano el juego
+        hotkeysBound
+            .add({
+                combo: keymap.arriba+' '+keymap.abajo + ' ' + keymap.arriba+' '+keymap.abajo + ' ' + keymap.arriba+' '+keymap.abajo+' '+keymap.enter,
+                callback: function(){
+                    $state.go('inicio');
+                }
+            })
+
     });
