@@ -45,5 +45,14 @@ angular.module('Frosch')
             return Math.floor($scope.numJugadores() + 1);
         };
 
+        //para poder terminar temprano el juego
+        hotkeys.bindTo($scope)
+            .add({
+                combo: keymap.arriba+' '+keymap.abajo + ' ' + keymap.arriba+' '+keymap.abajo + ' ' + keymap.arriba+' '+keymap.abajo+' '+keymap.enter,
+                callback: function(){
+                    $state.go('inicio');
+                }
+            })
+
 
     });
