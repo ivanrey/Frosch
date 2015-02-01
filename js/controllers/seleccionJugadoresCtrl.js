@@ -45,6 +45,7 @@ angular.module('Frosch')
             return Math.floor($scope.numJugadores() + 1);
         };
 
+        var keymap = config.configuracion.keymap;
         //para poder terminar temprano el juego
         hotkeys.bindTo($scope)
             .add({
