@@ -7,10 +7,10 @@ angular.module('Frosch')
 
         var timer = $timeout(function () {
 
-            if (chico.termino)
-                $state.go('jugar.chico.principal.termino');
-            else if( chico.jugadorActual.gano && $state.current.name != 'jugar.chico.principal.ganaste')
+            if (chico.jugadorActual.gano && $state.current.name != 'jugar.chico.principal.ganaste')
                 $state.go('jugar.chico.principal.ganaste');
+            else if (chico.termino)
+                $state.go('jugar.chico.principal.termino');
             else
                 $state.go('jugar.chico.principal')
         }, 3000);
