@@ -22,12 +22,14 @@
     "juego"
   ],
   "window": {
-    "fullscreen": true,
+    "fullscreen": false,
+    "toolbar": true,
+    "kiosk": false,
+    "frame": true,
+    "always-on-top": false,
+
     "resizable": false,
     "title": "Frosch",
-    "always-on-top": true,
-    "frame": false,
-    "kiosk": true,
     "height": 768,
     "min_height": 768,
     "width": 1280,
@@ -36,7 +38,6 @@
     "min_width": 1280,
     "position": "center",
     "show_in_taskbar": false,
-    "toolbar": false,
     "icon": "icono.png"
   },
   "version": "0.1.0",

@@ -62,7 +62,7 @@ angular.module('Frosch')
 
         jugadorCls.prototype.validarMonona = function (puntos) {
 
-            if(!this.config.monona)
+            if (!this.config.configuracion.monona)
                 return false; //moñona no activada
 
             var ranaORanita = false;
