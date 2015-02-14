@@ -6,7 +6,7 @@ angular.module('Frosch')
             $scope.configurarAudio.stop();
 
         var lanzamientoAudio = new audio("assets/sounds/lanzamiento.ogg");
-    var cambioJugadorAudio = new audio("assets/sounds/c_jugador.ogg");
+        var cambioJugadorAudio = new audio("assets/sounds/c_jugador.ogg");
 
         var keymap = config.configuracion.keymap;
         $scope.jugadores = chico.getJugadores();

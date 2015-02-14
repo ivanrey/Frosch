@@ -22,11 +22,12 @@
     "juego"
   ],
   "window": {
-    "fullscreen": false,
-    "toolbar": true,
-    "kiosk": false,
-    "frame": true,
-    "always-on-top": false,
+    "fullscreen": true,
+    "toolbar": false,
+    "kiosk": true,
+    "frame": false,
+    "always-on-top": true
+  ,
 
     "resizable": false,
     "title": "Frosch",
