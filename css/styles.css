@@ -1,0 +1,404 @@
+@font-face {
+  font-family: cs;
+  src: url("../assets/fonts/cs_regular.ttf");
+}
+@font-face {
+  font-family: sofachrome;
+  src: url("../assets/fonts/sofachrome_rg.ttf");
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  -webkit-user-select: none;
+  overflow: hidden;
+  /** no scrollbars */
+  background-color: black;
+}
+body .espacio {
+  width: 1280px;
+  height: 768px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -384px 0 0 -640px;
+}
+.view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.fondo-principal {
+  background-color: rgba(42, 61, 39, 0.8);
+}
+.fondo-laguna {
+  background: url("../assets/img/fondo-laguna.png") no-repeat, url("../assets/img/fondo-rana.png") no-repeat, url("../assets/img/fondo-rana-premio.png") no-repeat, url("../assets/img/fondo-monona.png") no-repeat, url("../assets/img/fondo-blanqueadas.png") no-repeat;
+}
+.fondo-rana {
+  background: url("../assets/img/fondo-rana.png") no-repeat;
+}
+.fondo-rana-premio {
+  background: url("../assets/img/fondo-rana-premio.png") no-repeat;
+}
+.fondo-ranita-premio {
+  background: url("../assets/img/fondo-ranita-premio.png") no-repeat;
+}
+.fondo-monona {
+  background: url("../assets/img/fondo-monona.png") no-repeat;
+}
+.fondo-blanqueadas {
+  background: url("../assets/img/fondo-blanqueadas.png") no-repeat;
+}
+.grande {
+  font-size: 100px;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #33ff38, 0 0 70px #a1ff7d, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
+  line-height: 90px;
+}
+.mediano {
+  font-size: 70px;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #eaff47, 0 0 70px #ff8554, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
+  line-height: 60px;
+}
+.pequeno {
+  font-size: 40px;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #eaff47, 0 0 70px #ff8554, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
+  line-height: 30px;
+}
+.centrar {
+  text-align: center;
+}
+.clearfix {
+  clear: both;
+}
+.ranas-esquina {
+  height: 480px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+.ranas-esquina.derecha {
+  left: auto;
+  right: 0;
+}
+.font-cs {
+  font-family: cs;
+}
+.comenzar {
+  padding-top: 10%;
+}
+.presione {
+  padding-top: 5%;
+}
+.colorContraste {
+  color: #d89e0e;
+}
+button {
+  display: inline-block;
+  box-sizing: content-box;
+  width: 500px;
+  line-height: 50px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  border-radius: 9px;
+  font-family: cs;
+  font-size: 40px;
+  color: #000000;
+  text-align: center;
+  text-overflow: clip;
+  background: #e8c209;
+  box-shadow: 3px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 1px -1px 0 rgba(15, 73, 168, 0.66);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  margin: 30px 30px 30px 30px;
+}
+button:hover,
+button.seleccionado {
+  background: #da8458;
+}
+.seleccionEquipos {
+  padding-top: 5%;
+}
+.seleccionEquipos .botones {
+  padding-left: 15%;
+}
+.seleccionPuntos {
+  padding-top: 10%;
+  padding-left: 1%;
+}
+.seleccionJugadores {
+  padding-top: 5%;
+  padding-left: 1%;
+}
+.columnas-2 .botones {
+  -webkit-column-count: 2;
+}
+.columna {
+  float: left;
+  height: 93%;
+  margin: 10px;
+}
+.columna.jugadores {
+  width: 25%;
+  padding-top: 10px;
+}
+.columna.monedas {
+  width: 30%;
+  background-color: rgba(42, 61, 39, 0.8);
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+.columna.orificios {
+  width: 37.5%;
+}
+.seleccionBlanqueada {
+  padding-top: 5%;
+}
+.seleccionBlanqueada .botones {
+  width: 500px;
+}
+.seleccionBlanqueada .botones button {
+  margin: 15px 30px 15px 130px;
+}
+.seleccionJugadores .jugadores progress {
+  /* Important Thing */
+  -webkit-appearance: none;
+  height: 258px;
+  width: 165px;
+}
+.seleccionJugadores .jugadores progress::-webkit-progress-bar {
+  background: transparent url("../assets/img/desactivado.png");
+}
+.seleccionJugadores .jugadores progress::-webkit-progress-value {
+  background: transparent url("../assets/img/activado.png");
+}
+.jugador {
+  height: 115px;
+  margin: 5px;
+}
+.jugador .avatar {
+  height: 115px;
+  float: left;
+  position: relative;
+  top: -10px;
+}
+.jugador .ronda {
+  top: -35px;
+  left: -260px;
+  float: right;
+  position: relative;
+  on: relative;
+}
+.jugador .datos {
+  padding-left: 80px;
+  padding-top: 3px;
+}
+.jugador .datos.activo {
+  background-color: rgba(42, 61, 39, 0.8);
+  width: 231px;
+  padding-right: 24px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.jugador .datos .titulo {
+  font-size: 30px;
+  margin: 5px;
+  line-height: 16px;
+  color: #eeeeee;
+  text-shadow: 3px -3px 0 rgba(15, 73, 168, 0.66);
+}
+.jugador .datos progress {
+  width: 210px;
+  height: 30px;
+  -webkit-appearance: none;
+}
+.jugador .datos progress::-webkit-progress-bar {
+  background-color: #eeeeee;
+}
+.jugador .datos progress::-webkit-progress-value {
+  background-color: #d89e0e;
+}
+.jugador .datos .puntaje {
+  position: relative;
+  top: -27px;
+  font-size: 45px;
+  line-height: 30px;
+  float: left;
+  padding-left: 5px;
+}
+.jugador .datos .blanqueadas {
+  text-align: right;
+  overflow: hidden;
+  height: 32px;
+}
+.jugador .datos .blanqueadas img {
+  height: 20px;
+  margin: 5px;
+}
+.monedas {
+  overflow: hidden;
+}
+.monedas .datos {
+  text-align: center;
+  border-top: 2px solid #eeeeee;
+}
+.monedas .datos > div {
+  width: 50%;
+  float: left;
+}
+.monedas .datos .titulo {
+  font-size: 30px;
+  color: #eeeeee;
+  line-height: 26px;
+}
+.monedas .datos .numero {
+  font-size: 50px;
+  line-height: 35px;
+  color: #d89e0e;
+}
+.monedas .argollas .argolla {
+  height: 105px;
+  width: 105px;
+  line-height: 105px;
+  margin: 5px;
+  font-size: 40px;
+}
+.monedas .tiros {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.monedas .tiros .tiro {
+  padding-top: 10px;
+  clear: both;
+}
+.monedas .tiros .tiro .titulo,
+.monedas .tiros .tiro .numero {
+  color: #aaa;
+}
+.orificios .meta span {
+  line-height: 26px;
+  font-size: x-large;
+}
+.orificios .argollas {
+  margin-top: 20px;
+}
+.orificios .argollas .argolla {
+  height: 130px;
+  width: 130px;
+  line-height: 130px;
+  margin: 5px;
+  font-size: 50px;
+}
+.orificios .argollas .argolla.rana,
+.orificios .argollas .argolla.ranita {
+  background-color: #d89e0e;
+  color: darkred;
+}
+.blanqueado .rana-label {
+  top: 60%;
+  left: 7%;
+}
+.blanqueado img {
+  padding-top: 4%;
+  padding-left: 19%;
+}
+.argolla {
+  border: solid 5px white;
+  background: #eeeeee;
+  border-radius: 100%;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #485b45;
+  box-shadow: 0 0 15px #777, inset 0 0 15px 5px #333;
+}
+.argolla.inactiva {
+  opacity: 0.3;
+  background: #aaa;
+  box-shadow: inset 0 0 0px 5px #333;
+}
+.argolla.rotar {
+  -webkit-transform: rotateY(360deg);
+  transition: all 0.5s ease-in-out;
+}
+.rana-label {
+  position: absolute;
+  left: 15%;
+  top: 30%;
+}
+.fondo-monona .monona-label {
+  background-image: url("../assets/img/monona-explosion.png");
+  background-size: contain;
+  width: 966px;
+  height: 768px;
+  -webkit-transform: rotate(-24deg);
+  padding-top: 300px;
+  padding-left: 351px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+.finChico {
+  padding-top: 2%;
+}
+.finChico .mediano {
+  font-size: 40px;
+  line-height: 40px;
+}
+.finChico ul li {
+  list-style-type: none;
+}
+.finChico ul li .jugador {
+  float: left;
+  height: 40px;
+  clear: left;
+  padding-left: 10%;
+}
+.finChico ul li .chicosPerdidos {
+  float: right;
+  padding-right: 40%;
+  clear: right;
+  color: #d89e0e;
+  font-size: 150%;
+}
+.finChico .continuar {
+  padding-right: 20%;
+  padding-left: 10%;
+  padding-top: 2%;
+}
+.finChico .continuar .botones {
+  padding-left: 10%;
+}
+.finChico .continuar .botones button {
+  width: 150px;
+  margin: 10px;
+}
+.creditos {
+  position: absolute;
+  z-index: 100;
+  margin: 5px;
+  right: 0;
+  font-size: 30px;
+}
+.ganaste > .grande {
+  padding-top: 10%;
+}
+button.inicio {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+.primer-ganador {
+  background-image: url('../assets/img/estrella.png');
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-left: -40px;
+}
