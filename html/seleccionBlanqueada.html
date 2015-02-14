@@ -5,7 +5,7 @@
 
         <botonera max="6" callback="callback" seleccionado="seleccionado" keymap="config.configuracion.keymap">
             <opcion ng-repeat="blanqueada in blanqueadas" opcion="{{$index + 1}}">{{(blanqueada +
-                "").replace("-","menos")}}
+                "").replace("-","menos ")}}
                 {{'PUNTOS' | translate}}
             </opcion>
         </botonera>
