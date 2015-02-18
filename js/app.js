@@ -19,7 +19,7 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
             .state('jugar', {
                 url: '/jugar',
                 template: '<ui-view/>',
-              controller: 'JugarCtrl',
+                controller: 'JugarCtrl',
                 resolve: {
                     tanda: function (TandaCls) {
                         return new TandaCls();
