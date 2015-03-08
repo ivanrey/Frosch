@@ -1,9 +1,9 @@
-<audio ng-src="{{ 'assets/sounds/credito'+config.creditosPorJugador()+'.ogg'}}
-" autoplay="autoplay"></audio>
+<audio ng-src="{{'assets/sounds/'+sonido()+'.ogg'}}" autoplay="autoplay"></audio>
 <div class="view fondo-laguna font-cs">
     <div class="seleccionJugadores columnas-2">
         <div ng-style="{visibility: creditosExactos() && 'visible' || 'hidden'}" class="grande centrar">{{"PRESIONE" |
             translate}} {{"INICIAR" | translate}}
+            {{sonido()}}
         </div>
         <div class="centrar jugadores">
             <progress value="{{creditosJugador(1)}}" max="1"></progress>
