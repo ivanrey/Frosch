@@ -1,9 +1,9 @@
 Frosch
 ======
 
-Frosch, software para juego de rana electrónico.
+Frosch, software para juego de rana electrónica.
 
-**Versión 1.0.0**
+**Versión 1.1.1**
 
 ----------
 
@@ -31,12 +31,36 @@ Para configurar edite el archivo `config/config.json`
 
 **Extender el sistema**
 
+**Idiomas**
+
+Actualmente tiene versión en español colombiano (por defecto) y versión en inglés.
+
+
 
 Próximamente más instrucciones.
 
 CRÉDITOS
 ========
 
-Diseño e imaginación: Joaquín Díaz e Iván Rey [Iván Rey](https://github.com/ivanrey)
+Diseño e imaginación: [Joaquín Díaz](http://construyasuvideorockola.com) e Iván Rey [Iván Rey](https://github.com/ivanrey)
 Programación: Iván Rey
 Sonidos y Música: Joaquín Díaz
+
+OTROS NOMBRES
+=============
+
+Este juego también es conocido con estos otros nombres, aunque es posible que tenga otro esquema de juego.
+Este software está basado en la versión colombiana (Rana), aunque debería poderse migrar a otras versiones en otros países.
+
+También es conocido como:
+
+ - Juego de Sapo (Perú, Argentina)
+ - Juego de la rana (España, Chile)
+ - Igel jokoa (País Vasco)
+ - Jew de la grenouille, Le Tonneau, (Francia)
+ - Tiro al Sapo (Bolivia, Perú)
+ - Rana (Colombia)
+ - Toad in the hole (UK - Reino Unido)
+
+
+
