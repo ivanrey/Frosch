@@ -1,6 +1,6 @@
 {
   "name": "Frosch",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authors": [
     "Ivan Rey <ivan.rey@inp.co>"
   ],
@@ -20,7 +20,7 @@
     "picachu"
   ],
   "license": "MIT",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
