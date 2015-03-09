@@ -26,5 +26,6 @@
   "SI": "Yes",
   "NO": "No",
   "CONTINUAR": "Continue?",
-  "GANASTE": "You won!"
+  "GANASTE": "You won!",
+  "META": "goal score"
 }

@@ -4,7 +4,7 @@
     "download_dir": "/Users/ivan/Downloads/Web2Executable.app/Contents/MacOS/files/downloads",
     "windows": true,
     "mac": false,
-    "nw_version": "0.11.0-rc1",
+    "nw_version": "0.12.0",
     "force_download": false,
     "linux-x64": false
   },
@@ -41,7 +41,7 @@
     "show_in_taskbar": false,
     "icon": "icono.png"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "webkit": {
     "page-cache": true,
     "java": false,
