@@ -1,9 +1,9 @@
 angular.module('Frosch')
-    .factory('TandaCls', function (ConfiguracionCls, ChicoCls, ParticipanteCls) {
+    .factory('TandaCls', function (ChicoCls, ParticipanteCls) {
 
-        var tandaCls = function () {
+        var tandaCls = function (ConfiguracionService) {
             var me = this;
-            this.configuracion = new ConfiguracionCls();
+            this.configuracion = ConfiguracionService;
             this.participantes = [];
             this.chicos = [];
 

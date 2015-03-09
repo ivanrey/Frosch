@@ -19,4 +19,9 @@ angular.module('translate', ['pascalprecht.translate'])
             });
             return traduccion;
         };
+    })
+    .filter('translateAudio', function ($translate) {
+        return function (audioSrc) {
+            return 'assets/sounds/'+$translate.use()+'/'+audioSrc;
+        }
     });

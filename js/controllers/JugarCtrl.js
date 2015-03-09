@@ -2,7 +2,7 @@ angular.module('Frosch')
     .controller('JugarCtrl',
     function ($scope, $state, config, audio) {
 
-        $scope.configurarAudio = new audio("assets/sounds/configurar.ogg");
+        $scope.configurarAudio = new audio("configurar.ogg",false);
         $scope.configurarAudio.audio.loop = true;
 
         $scope.configurarAudio.play();

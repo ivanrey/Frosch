@@ -2,7 +2,7 @@
  * Created by ivan on 10/5/14.
  */
 angular.module('Frosch')
-    .factory('ConfiguracionCls', function ($http) {
+    .factory('ConfiguracionService', function ($http, $translate) {
 
         var clase = function () {
             var me = this;
@@ -15,7 +15,10 @@ angular.module('Frosch')
             var httpPromise = $http.get('config/config.json');
             return httpPromise.then(function (httpResponse) {
                 me.configuracion = httpResponse.data;
-                return me;
+                return $translate.use(me.configuracion.idioma).then(function(){
+                    return me;
+                }); //el cambio de idioma es promise
+
             });
         };
 
@@ -35,5 +38,5 @@ angular.module('Frosch')
             this.numJugadores = numJugadores;
         };
 
-        return clase;
+        return new clase();
     });

@@ -2,7 +2,7 @@ angular.module('Frosch')
     .factory('ChicoCls', function (JugadorCls) {
 
         /**
-         * @param config ConfiguracionCls
+         * @param config ConfiguracionService
          */
         var chicoCls = function (config) {
             this.configuracion = config;

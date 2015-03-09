@@ -45,12 +45,21 @@ angular.module('Frosch')
             return Math.floor($scope.numJugadores() + 1);
         };
 
+
+        $scope.sonido = function(){
+            var creditos = 'credito'+config.creditosPorJugador();
+            if(config.equipos)
+                creditos += '_equipo';
+
+            return creditos + '.ogg';
+        };
+
         var keymap = config.configuracion.keymap;
         //para poder terminar temprano el juego
         hotkeys.bindTo($scope)
             .add({
-                combo: keymap.arriba+' '+keymap.abajo + ' ' + keymap.arriba+' '+keymap.abajo + ' ' + keymap.arriba+' '+keymap.abajo+' '+keymap.enter,
-                callback: function(){
+                combo: keymap.arriba + ' ' + keymap.abajo + ' ' + keymap.arriba + ' ' + keymap.abajo + ' ' + keymap.arriba + ' ' + keymap.abajo + ' ' + keymap.enter,
+                callback: function () {
                     $state.go('inicio');
                 }
             })

@@ -5,8 +5,8 @@ angular.module('Frosch')
         if ($scope.configurarAudio) //en pruebas arranca aca de una entonces no esta el audio activo
             $scope.configurarAudio.stop();
 
-        var lanzamientoAudio = new audio("assets/sounds/lanzamiento.ogg");
-        var cambioJugadorAudio = new audio("assets/sounds/c_jugador.ogg");
+        var lanzamientoAudio = new audio("lanzamiento.ogg", false);
+        var cambioJugadorAudio = new audio("c_jugador.ogg", true);
 
         var keymap = config.configuracion.keymap;
         $scope.jugadores = chico.getJugadores();

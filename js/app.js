@@ -14,15 +14,20 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
             state('inicio', {
                 url: "/inicio",
                 controller: 'InicioCtrl',
-                templateUrl: "html/inicio.html"
+                templateUrl: "html/inicio.html",
+                resolve: {
+                    config: function (ConfiguracionService) {
+                        return ConfiguracionService; // se usa para obtener el idioma del sonido en el filter
+                    }
+                }
             })
             .state('jugar', {
                 url: '/jugar',
                 template: '<ui-view/>',
                 controller: 'JugarCtrl',
                 resolve: {
-                    tanda: function (TandaCls) {
-                        return new TandaCls();
+                    tanda: function (TandaCls, ConfiguracionService) {
+                        return new TandaCls(ConfiguracionService);
                     },
                     config: function (tanda) {
                         return tanda.configuracion;
@@ -148,7 +153,7 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
 
         $rootScope.creditos = 0; // así no deben perderse nunca créditos
 
-        var monedaAudio = new audio('assets/sounds/moneda.ogg');
+        var monedaAudio = new audio('moneda.ogg');
 
         hotkeys.bindTo($rootScope)
             .add({
