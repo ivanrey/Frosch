@@ -124,6 +124,9 @@ button.seleccionado {
 .seleccionEquipos .botones {
   padding-left: 15%;
 }
+.seleccionEquipos .botones button {
+  margin-top: 15px;
+}
 .seleccionPuntos {
   padding-top: 10%;
   padding-left: 1%;
@@ -162,7 +165,7 @@ button.seleccionado {
   width: 500px;
 }
 .seleccionBlanqueada .botones button {
-  margin: 15px 30px 15px 130px;
+  margin: 20px 30px 15px 130px;
 }
 .seleccionJugadores .jugadores progress {
   /* Important Thing */

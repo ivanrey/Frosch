@@ -26,8 +26,7 @@
     "toolbar": false,
     "kiosk": true,
     "frame": false,
-    "always-on-top": true
-  ,
+    "always-on-top": true,
 
     "resizable": false,
     "title": "Frosch",
