@@ -41,7 +41,7 @@
     "show_in_taskbar": false,
     "icon": "icono.png"
   },
-  "version": "1.1.1",
+  "version": "1.1.2",
   "webkit": {
     "page-cache": true,
     "java": false,

@@ -10,7 +10,7 @@ module.exports = function (grunt) {
             options: {
                 appName: 'Frosch',
                 platforms: ['win', 'osx64', 'linux64', 'linux32'],
-                version: '0.11.6',
+                version: '0.12.0',
                 dontMerge: true,
                 buildDir: './bin' // Where the build version of my node-webkit app is saved
             },
