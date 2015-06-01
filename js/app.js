@@ -6,8 +6,6 @@
 angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
     .config(
     function ($stateProvider, $urlRouterProvider, hotkeysProvider) {
-        $urlRouterProvider.otherwise("/inicio");
-
 
         //Definicion de los estados
         $stateProvider.
@@ -181,4 +179,5 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                     event.preventDefault();
                 }
             })
-    });
+
+  });

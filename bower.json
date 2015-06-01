@@ -30,6 +30,7 @@
     "tests"
   ],
   "dependencies": {
+    "frosch": "ivanrey/Frosch#frosch",
     "angular": "~1.3",
     "angular-ui-router": "~0.2",
     "angular-translate": "~2.4",
