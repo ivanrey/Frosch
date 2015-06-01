@@ -1,5 +1,6 @@
 {
   "idioma":"es-co",
+  "tiempoEntreVideos": [5, 10], //aleatorio cada 5 a 10 min
   "puntajes": [
     400,
     800,
