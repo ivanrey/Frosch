@@ -21,6 +21,18 @@ angular.module('Frosch')
             }
         };
 
+        jugadorCls.prototype.puntosTurno = function () {
+            var suma = 0;
+            for (var i = 0; i < this.ultimasArgollas.length; i++) {
+                if (this.ultimasArgollas[i] == null) {
+                    break;
+                }
+                suma += this.ultimasArgollas[i];
+
+            }
+            return suma;
+        };
+
         jugadorCls.prototype.getBlanqueadasArray = function () {
             return new Array(this.blanqueadas);
         };
