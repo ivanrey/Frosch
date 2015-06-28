@@ -10,7 +10,7 @@ module.exports = function (grunt) {
             options: {
                 appName: 'Frosch',
                 platforms: ['win', 'osx64', 'linux64', 'linux32'],
-              version: '0.12.2',
+                version: '0.12.2',
                 dontMerge: true,
                 buildDir: './bin' // Where the build version of my node-webkit app is saved
             },
@@ -28,7 +28,7 @@ module.exports = function (grunt) {
                 './components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
                 './components/angular-ui-router/release/angular-ui-router.js',
                 './components/angular-hotkeys/build/hotkeys.js',
-              './components/forsch/frosch.min.js',
+                './components/forsch/frosch.min.js',
 
                 './config/**/*',
                 './css/**/*',
