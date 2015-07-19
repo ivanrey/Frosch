@@ -13,5 +13,10 @@ angular.module('Frosch')
                 $state.go('jugar.chico.seleccionJugadores')
 
             }
-        }
+        };
+
+        $scope.getNumber = function(number){
+            return new Array(number);
+        };
+
     });

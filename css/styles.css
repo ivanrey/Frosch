@@ -404,3 +404,75 @@ button.inicio {
   display: inline-block;
   margin-left: -40px;
 }
+/** coin */
+.coin p {
+  position: absolute;
+  font-size: 28px;
+  z-index: 700;
+  top: -23px;
+  left: 16px;
+}
+.coin.silver p {
+  color: #a0a0a0;
+}
+.coin {
+  cursor: pointer;
+  content: "";
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+  margin-right: 5%;
+  top: -6px;
+  border-radius: 50px;
+  z-index: 500;
+  float: left;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.coin:after {
+  content: "";
+  width: 42px;
+  height: 42px;
+  display: block;
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  border-radius: 50px;
+  z-index: 600;
+}
+.coin:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  border-radius: 50px;
+  z-index: 500;
+}
+.coin:hover {
+  top: -1px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.silver {
+  background: linear-gradient(45deg, #a0a0a0 0%, #e8e8e8 56%);
+}
+.silver:before {
+  background: linear-gradient(45deg, #b5b5b5 0%, #fcfcfc 56%, #e8e8e8 96%);
+  border: 1px solid #b5b5b5;
+}
+.silver:after {
+  background: linear-gradient(45deg, #b5b5b5 0%, #fcfcfc 56%, #e8e8e8 96%);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+  border-right: 1px solid rgba(160, 160, 160, 0.5);
+  box-shadow: inset 0px 0px 2px 2px rgba(150, 150, 150, 0.05);
+}
+.silver:hover:after {
+  background: linear-gradient(45deg, #b5b5b5 0%, #fcfcfc 38%, #e8e8e8 96%);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
+  border-right: 1px solid rgba(160, 160, 160, 0.5);
+  box-shadow: inset 0px 0px 2px 2px rgba(150, 150, 150, 0.05);
+}

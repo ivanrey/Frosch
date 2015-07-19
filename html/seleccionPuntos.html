@@ -5,7 +5,10 @@
 
         <botonera max="6" callback="callback" seleccionado="seleccionado" keymap="config.configuracion.keymap">
             <opcion ng-repeat="puntaje in puntajes" opcion="{{$index + 1}}">{{puntaje}} {{'PUNTOS' | translate }}
+                <div class="coin silver" ng-repeat="i in getNumber(config.configuracion.creditosPorPuntaje[puntaje]) track by $index"><p>$</p></div>
+
             </opcion>
+
         </botonera>
         <div class="grande centrar">{{"PRESIONE" | translate}} <strong>{{"INICIAR" | translate}}</strong></div>
 
