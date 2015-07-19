@@ -3,13 +3,14 @@
         {{"BLANQUEADO" | translate}}<br>
         <span ng-if="config.blanqueada && jugador.blanqueadasRestantes() > 0">
             {{"TE_QUEDAN_BLANQUEADAS" | translateReplace:{ numBlanqueadas: jugador.blanqueadasRestantes()} }}
+            <audio src="assets/sounds/blanqueado.ogg" preload="true" autoplay="true"></audio>
         </span>
          <span ng-if="config.blanqueada && jugador.blanqueadasRestantes() <= 0">
             {{"PERDISTE" | translate }}
+             <audio ng-src="{{ 'gameover.ogg'  | translateAudio }}" autoplay="autoplay"></audio>
         </span>
     </div>
 
     <img src="assets/img/rana-blanqueada.png" class="centrar"/>
 </div>
 
-<audio src="assets/sounds/blanqueado.ogg" preload="true" autoplay="true"></audio>
