@@ -205,6 +205,11 @@ button.seleccionado {
   padding-right: 24px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  box-shadow: 0px 0 20px 4px rgba(14, 14, 15, 0.91);
+}
+.jugador .datos.activo .titulo {
+  color: #d89e0e;
+  text-shadow: 3px -3px 0 rgba(57, 38, 6, 0.66) !important;
 }
 .jugador .datos .titulo {
   font-size: 30px;
@@ -226,7 +231,7 @@ button.seleccionado {
 }
 .jugador .datos .puntaje {
   position: relative;
-  top: -27px;
+  top: -58px;
   font-size: 45px;
   line-height: 30px;
   float: left;

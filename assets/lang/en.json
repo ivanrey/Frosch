@@ -21,6 +21,8 @@
   "RANITA": " Froggy !!!",
   "MOÑONA": " Strike !!!",
   "BLANQUEADO": " Blanked !",
+  "TE_QUEDAN_BLANQUEADAS": "You have %numBlanqueadas% left",
+  "PERDISTE" : "You lost!",
   "FIN_CHICO": "End of match #%numChico%",
   "CHICOS_PERDIDOS": "Lost Matches",
   "SI": "Yes",

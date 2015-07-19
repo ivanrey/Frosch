@@ -14,7 +14,7 @@ angular.module('Frosch')
                 var i = this.numJugadorActual;
                 var nuevoJugador = null;
                 do {
-                    nuevoJugador = this.jugadores[(i + 1) % this.jugadores.length]
+                    nuevoJugador = this.jugadores[(i + 1) % this.jugadores.length];
                     i++;
                 } while (!nuevoJugador.enJuego() && nuevoJugador != this.jugadorActual);
                 return nuevoJugador;
@@ -56,9 +56,6 @@ angular.module('Frosch')
             if (activos < 2) // mínimo 2 jugadores para seguir el chico
             {
                 this.termino = true;
-                if (!this.termino && this.jugadorActual.gano) {
-                    this.cambiarTurno(true); // automaticamente activo el siguiente turno
-                }
             }
 
         };
@@ -76,10 +73,11 @@ angular.module('Frosch')
                 throw new Error("El siguiente turno no es " + turno)
             }
 
-
             this.jugadorAnterior.desactivar();
 
             this.jugadorActual.activar();
+
+            this.verificarTurno();
 
         };
 

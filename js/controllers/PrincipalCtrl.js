@@ -1,6 +1,6 @@
 angular.module('Frosch')
     .controller('PrincipalCtrl',
-  function ($scope, $state, chico, config, hotkeys, audio, $timeout) {
+    function ($scope, $state, chico, config, hotkeys, audio, $timeout) {
 
         if ($scope.configurarAudio) //en pruebas arranca aca de una entonces no esta el audio activo
             $scope.configurarAudio.stop();
@@ -54,13 +54,15 @@ angular.module('Frosch')
 
             try {
                 this.chico.cambiarTurno(turno);
-              $timeout(function () {
-                cambioJugadorAudio.play();
-              }, this.chico.jugadorAnterior.blanqueado ? 3000 : 0);
+                $timeout(function () {
+                    cambioJugadorAudio.play();
+                }, this.chico.jugadorAnterior.blanqueado ? 3000 : 0);
 
                 if (this.chico.jugadorAnterior.blanqueado) {
                     $state.go('jugar.chico.principal.blanqueado');
                 }
+
+
 
             }
             catch (e) {
@@ -102,8 +104,8 @@ angular.module('Frosch')
         //para poder terminar temprano el juego
         hotkeysBound
             .add({
-                combo: keymap.arriba+' '+keymap.abajo + ' ' + keymap.arriba+' '+keymap.abajo + ' ' + keymap.arriba+' '+keymap.abajo+' '+keymap.enter,
-                callback: function(){
+                combo: keymap.arriba + ' ' + keymap.abajo + ' ' + keymap.arriba + ' ' + keymap.abajo + ' ' + keymap.arriba + ' ' + keymap.abajo + ' ' + keymap.enter,
+                callback: function () {
                     $state.go('inicio');
                 }
             })

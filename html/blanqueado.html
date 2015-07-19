@@ -1,7 +1,12 @@
 <div class="view fondo-blanqueadas font-cs blanqueado">
     <div class="centrar grande rana-label">
         {{"BLANQUEADO" | translate}}<br>
-        {{"BLANQUEADO" | translate}}
+        <span ng-if="config.blanqueada && jugador.blanqueadasRestantes() > 0">
+            {{"TE_QUEDAN_BLANQUEADAS" | translateReplace:{ numBlanqueadas: jugador.blanqueadasRestantes()} }}
+        </span>
+         <span ng-if="config.blanqueada && jugador.blanqueadasRestantes() <= 0">
+            {{"PERDISTE" | translate }}
+        </span>
     </div>
 
     <img src="assets/img/rana-blanqueada.png" class="centrar"/>

@@ -4,7 +4,7 @@ angular.module('Frosch')
         var jugadorCls = function (numero, config) {
             this.numero = numero;
             this.config = config;
-            this.blanqueadas = 0;
+            this.blanqueadas = 5;
             this.puntos = 0;
             this.activo = false;
 
@@ -100,11 +100,15 @@ angular.module('Frosch')
                 this.blanqueadas++;
                 this.puntos += this.config.blanqueada * 1;
 
-                if (this.config.blanqueada && this.blanqueadas > this.config.configuracion.maxBlanqueadas) {
+                if (this.config.blanqueada && this.blanqueadas >= this.config.configuracion.maxBlanqueadas) {
                     //perdió por blanqueadas
                     this.perdio = true;
                 }
             }
+        };
+
+        jugadorCls.prototype.blanqueadasRestantes = function(){
+            return this.config.configuracion.maxBlanqueadas - this.blanqueadas;
         };
 
         jugadorCls.prototype.activar = function () {

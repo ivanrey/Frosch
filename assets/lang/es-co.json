@@ -21,6 +21,8 @@
   "RANITA": "¡¡¡ Ranita !!!",
   "MOÑONA": "¡¡¡ Moñona !!!",
   "BLANQUEADO": "¡ Blanqueado !",
+  "TE_QUEDAN_BLANQUEADAS": "Te quedan %numBlanqueadas%",
+  "PERDISTE" : "¡Perdiste el chico!",
   "FIN_CHICO": "Fin del chico #%numChico%",
   "CHICOS_PERDIDOS": "Chicos Perdidos",
   "SI": "Sí",

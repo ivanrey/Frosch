@@ -125,6 +125,16 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
                     }
                 }
             })
+            .state('jugar.chico.principal.maxBlanqueadas', {
+                url: "/maxBlanqueadas",
+                controller: 'NotificacionCtrl',
+                templateUrl: "html/maxBlanqueadas.html",
+                resolve: {
+                    jugador: function (chico) {
+                        return chico.jugadorAnterior;
+                    }
+                }
+            })
             .state('jugar.chico.principal.termino', {
                 url: "/fin",
                 controller: 'FinChicoCtrl',

@@ -22,6 +22,8 @@
   "MOÑONA": "   Vous avez tout gagné !!!",
   "BLANQUEADO": " Blanchie !",
   "FIN_CHICO": "Gamer plus #%numChico%",
+  "TE_QUEDAN_BLANQUEADAS": "Vous avez  %numBlanqueadas%",
+  "PERDISTE" : "Vous avez perdu le jeu!",
   "CHICOS_PERDIDOS": "Fin Du Jeu",
   "SI": "Ouaip",
   "NO": "Ne Pas",
