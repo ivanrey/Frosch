@@ -1,5 +1,5 @@
 angular.module('Frosch')
-    .controller('InicioCtrl', function ($scope, $state, hotkeys, config, $sce, $http, $interval) {
+    .controller('InicioCtrl', function ($scope, $state, hotkeys, config, $http, $interval) {
 
         $scope.iniciar = function () {
             $state.go('jugar.seleccionEquipos');
@@ -19,7 +19,7 @@ angular.module('Frosch')
             $http.head(videoURL)
                 .success(function () {
                     $scope.videos.push([{
-                        src: $sce.trustAsResourceUrl(videoURL),
+                        src: videoURL,
                         type: "video/webm"
                     }]);
                     cargarVideo(numero + 1);

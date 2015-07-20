@@ -26,12 +26,15 @@ module.exports = function (grunt) {
                 './assets/videos/.gitkeep',
 
                 './components/jquery/dist/jquery.js',
-                './components/less/dist/less-1.7.5.js',
+                './components/less/dist/less.js',
                 './components/angular/angular.js',
                 './components/angular-translate/angular-translate.js',
                 './components/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
                 './components/angular-ui-router/release/angular-ui-router.js',
                 './components/angular-hotkeys/build/hotkeys.js',
+                './components/angular-sanitize/angular-sanitize.js',
+                './components/videogular/videogular.js',
+
                 './components/frosch/frosch.min.js',
 
                 './config/**/*',
