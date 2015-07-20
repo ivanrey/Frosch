@@ -29,8 +29,10 @@ angular.module('Frosch')
         cargarVideo(1);
 
         var timerVideo = $interval( function () {
-            $scope.mostrandoVideo = true;
-            $scope.numVideo = Math.floor(Math.random() * ($scope.videos.length))
+            if($scope.videos) {
+                $scope.mostrandoVideo = true;
+                $scope.numVideo = Math.floor(Math.random() * ($scope.videos.length));
+            }
         }, config.configuracion.minutosEntreVideos * 60 * 1000);
 
 
