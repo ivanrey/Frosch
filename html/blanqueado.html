@@ -1,9 +1,9 @@
+<audio src="assets/sounds/blanqueado.ogg" preload="true" autoplay="true"></audio>
 <div class="view fondo-blanqueadas font-cs blanqueado">
     <div class="centrar grande rana-label">
         {{"BLANQUEADO" | translate}}<br>
         <span ng-if="config.blanqueada && jugador.blanqueadasRestantes() > 0">
             {{"TE_QUEDAN_BLANQUEADAS" | translateReplace:{ numBlanqueadas: jugador.blanqueadasRestantes()} }}
-            <audio src="assets/sounds/blanqueado.ogg" preload="true" autoplay="true"></audio>
         </span>
          <span ng-if="config.blanqueada && jugador.blanqueadasRestantes() <= 0">
             {{"PERDISTE" | translate }}
