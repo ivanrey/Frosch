@@ -19,7 +19,11 @@ module.exports = function (grunt) {
                 './package.json',
                 './README.md',
                 './LICENSE',
-                './assets/**/*',
+                './assets/fonts/**/*',
+                './assets/img/**/*',
+                './assets/lang/**/*',
+                './assets/sounds/**/*',
+                './assets/videos/.gitkeep',
 
                 './components/jquery/dist/jquery.js',
                 './components/less/dist/less-1.7.5.js',

@@ -157,6 +157,9 @@ button.seleccionado {
 .columna.orificios {
   width: 37.5%;
 }
+video {
+  width: 100%;
+}
 .seleccionBlanqueada {
   padding-top: 5%;
 }
