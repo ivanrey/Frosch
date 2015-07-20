@@ -1,18 +1,25 @@
 <audio ng-src="{{ 'inicio.ogg' | translateAudio }}" autoplay="autoplay"></audio>
-<audio src="assets/sounds/introduccion.ogg" autoplay="autoplay">
+<audio src="assets/sounds/introduccion.ogg" autoplay="autoplay"></audio>
+<div ng-if="!mostrandoVideo">
+    <div class="view fondo-laguna font-cs inicio">
 
+        <img src="assets/img/ranas-esquina.png" class="ranas-esquina"></span>
 
-</audio>
-<div class="view fondo-laguna font-cs inicio">
-    <img src="assets/img/ranas-esquina.png" class="ranas-esquina"></span>
+        <div class="comenzar grande centrar">
+            {{'COMENZAR' | translate}}
 
-    <div class="comenzar grande centrar">
-        {{'COMENZAR' | translate}}
+        </div>
+        <div class="presione grande centrar">{{"PRESIONE"| translate}}
+            <br><strong class="colorContraste">{{"INICIAR" | translate}}</strong>
+        </div>
 
+        <button class="inicio" ng-click="iniciar()">{{"INICIAR" | translate}}</button>
     </div>
-    <div class="presione grande centrar">{{"PRESIONE"| translate}}
-        <br><strong class="colorContraste">{{"INICIAR" | translate}}</strong>
-    </div>
-
-    <button class="inicio" ng-click="iniciar()">{{"INICIAR" | translate}}</button>
 </div>
+
+<div ng-if="mostrandoVideo">
+    <videogular vg-auto-play="true" vg-complete="quitarVideo()">
+        <vg-media vg-src="videos[numVideo]"></vg-media>
+    </videogular>
+</div>
+

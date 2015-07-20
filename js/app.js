@@ -3,7 +3,7 @@
  * Archivo principal de la aplicación
  */
 
-angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys'])
+angular.module('Frosch', ['ngSanitize','ui.router', 'translate', 'cfp.hotkeys', 'com.2fdevs.videogular'])
     .config(
     function ($stateProvider, $urlRouterProvider, hotkeysProvider) {
 

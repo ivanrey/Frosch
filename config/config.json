@@ -25,6 +25,7 @@
   },
   "maxArgollas": 6,
   "maxBlanqueadas": 6,
+  "minutosEntreVideos": 5,
   "orificios": [
     10,
     100,
