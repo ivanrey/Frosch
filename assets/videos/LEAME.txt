@@ -1,0 +1,20 @@
+Instrucciones para los videos:
+
+Los videos deben estar nombrados en orden desde el 1 hasta el final, con el nombre video1, video2, video3 video4, etc.
+
+El formato de los videos es WebM y la extensión debe ser .webm
+
+Ejemplo de como deben ir los videos en la carpeta:
+
+    video1.webm
+    video2.webm
+    video3.webm
+    video4.webm
+
+No se puede saltar ningún número, deben ser consecutivos. El formato WebM puede se convertido con programas de internet.
+
+Los videos utilizarán el ancho completo de la pantalla. Se recomienda tener videos del mismo ancho de la pantalla.
+
+La cantidad de videos es ilimitada.
+
+Los videos se lanzan de forma aleatoria cada cierta cantidad de minutos que se configura en la variable "minutosEntreVideos" del archivo config.json

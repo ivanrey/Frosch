@@ -23,7 +23,7 @@ module.exports = function (grunt) {
                 './assets/img/**/*',
                 './assets/lang/**/*',
                 './assets/sounds/**/*',
-                './assets/videos/.gitkeep',
+                './assets/videos/LEAME.txt',
 
                 './components/jquery/dist/jquery.js',
                 './components/less/dist/less.js',
