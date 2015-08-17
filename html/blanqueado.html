@@ -1,7 +1,10 @@
-<div class="view fondo-blanqueadas font-cs blanqueado">
+<div class="view font-cs blanqueado" ng-class="{
+        'fondo-blanqueadas': config.blanqueada && jugador.blanqueadasRestantes() > 0,
+        'fondo-blanqueadas-out': config.blanqueada && jugador.blanqueadasRestantes() <= 0}">
     <div class="centrar grande rana-label">
         {{"BLANQUEADO" | translate}}<br>
         <span ng-if="config.blanqueada && jugador.blanqueadasRestantes() > 0">
+            <img src="assets/img/rana-blanqueada.png" class="centrar"/>
             {{"TE_QUEDAN_BLANQUEADAS" | translateReplace:{ numBlanqueadas: jugador.blanqueadasRestantes()} }}
             <audio src="assets/sounds/blanqueado.ogg" preload="true" autoplay="true"></audio>
         </span>
@@ -11,6 +14,6 @@
         </span>
     </div>
 
-    <img src="assets/img/rana-blanqueada.png" class="centrar"/>
+
 </div>
 
