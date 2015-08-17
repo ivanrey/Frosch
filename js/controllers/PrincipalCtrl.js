@@ -55,7 +55,8 @@ angular.module('Frosch')
             try {
                 this.chico.cambiarTurno(turno);
                 $timeout(function () {
-                    cambioJugadorAudio.play();
+                    if(!chico.termino)
+                        cambioJugadorAudio.play();
                 }, this.chico.jugadorAnterior.blanqueado ? 3000 : 0);
 
                 if (this.chico.jugadorAnterior.blanqueado) {
