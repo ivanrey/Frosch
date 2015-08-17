@@ -1,9 +1,9 @@
 Frosch
 ======
 
-Frosch, software para juego de rana electrónica.
+Frosch, software para juego de rana electrónica o rana digital.
 
-**Versión 1.1.1**
+**Versión 1.2.2**
 
 ----------
 
@@ -23,9 +23,45 @@ Para configurar edite el archivo `config/config.json`
 
 **Personalizar la configuración**
 
+El archivo config.json contiene las variables a personalizar.
+
 **Personalizar los sonidos**
 
+Para usar sus propios sonidos reemplace los archivos de la carpeta assets/sounds según el idioma que desee personalizar.
+
+Los archivos deben venir en formato ogg.
+
+**Personalizar los videos**
+
+Instrucciones para los videos aleatorios antes de iniciar el juego:
+
+Los videos deben estar nombrados en orden desde el 1 hasta el final, con el nombre video1, video2, video3 video4, etc.
+
+El formato de los videos es WebM y la extensión debe ser .webm
+
+Ejemplo de como deben ir los videos en la carpeta:
+
+    video1.webm
+    video2.webm
+    video3.webm
+    video4.webm
+
+No se puede saltar ningún número, deben ser consecutivos. El formato WebM puede se convertido con programas de internet.
+
+Los videos utilizarán el ancho completo de la pantalla. Se recomienda tener videos del mismo ancho de la pantalla.
+
+La cantidad de videos es ilimitada.
+
+Los videos se lanzan de forma aleatoria cada cierta cantidad de minutos que se configura en la variable "minutosEntreVideos" del archivo
+config.json
+
+Un programa para convertir los videos de otros formatos a webm puede descargarse en http://easyhtml5video.com/
+
 **Personalizar el Idioma**
+
+La carepta assets/lang contiene el archivo de idioma. El archivo está en formato JSON. Las llaves deben permanecer iguales se debe cambiar el valor únicamente. En el config.json se escoge el archivo de idioma que el sistema usará.
+
+Los sonidos utilizados son los que corresponden al código del idioma en la carpeta assets/sounds.
 
 **Personalizar la apariencia**
 
@@ -33,7 +69,7 @@ Para configurar edite el archivo `config/config.json`
 
 **Idiomas**
 
-Actualmente tiene versión en español colombiano (por defecto) y versión en inglés.
+Actualmente tiene versión en español colombiano (por defecto), versión en inglés y en francés.
 
 
 
