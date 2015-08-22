@@ -4,7 +4,7 @@
     "download_dir": "/Users/ivan/Downloads/Web2Executable.app/Contents/MacOS/files/downloads",
     "windows": true,
     "mac": false,
-    "nw_version": "0.12.2",
+    "nw_version": "0.12.4",
     "force_download": false,
     "linux-x64": false
   },
