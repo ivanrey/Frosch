@@ -27,7 +27,6 @@
     "kiosk": true,
     "frame": false,
     "always-on-top": true,
-
     "resizable": false,
     "title": "Frosch",
     "height": 768,
@@ -60,6 +59,7 @@
     "doc": "docs"
   },
   "dependencies": {
+    "home-or-tmp": "^2.0.0",
     "node-webkit-builder": "^1.0.8"
   },
   "scripts": {
