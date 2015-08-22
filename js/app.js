@@ -159,7 +159,17 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys', 'com.2fdevs.v
             alert(text);
         };
 
-        $rootScope.creditos = 0; // así no deben perderse nunca créditos
+        $rootScope.guardarCreditos = function () {
+            localStorage.creditos = $rootScope.creditos;
+            localStorage.creditosExcedente = $rootScope.creditosExcedente;
+        };
+
+        $rootScope.cargarCreditos = function () {
+            $rootScope.creditos = localStorage.creditos ? localStorage.creditos : 0;// así no deben perderse nunca créditos
+            $rootScope.creditosExcedente = localStorage.creditosExcedente ? localStorage.creditosExcedente : 0;
+        };
+
+        $rootScope.cargarCreditos();
 
         var monedaAudio = new audio('moneda.ogg');
 
@@ -181,6 +191,7 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys', 'com.2fdevs.v
                     $rootScope.creditos++;
 
                     monedaAudio.play();
+                    $rootScope.guardarCreditos();
                 }
             })
             .add({
@@ -190,4 +201,4 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys', 'com.2fdevs.v
                 }
             })
 
-  });
+    });

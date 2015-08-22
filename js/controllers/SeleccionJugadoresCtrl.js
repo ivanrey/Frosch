@@ -63,6 +63,26 @@ angular.module('Frosch')
                     $state.go('inicio');
                 }
             })
+            .add({
+                combo: keymap.arriba,
+                callback: function(){
+                    if($rootScope.creditos > 0) {
+                        $rootScope.creditosExcedente++;
+                        $rootScope.creditos--;
+                        $rootScope.guardarCreditos();
+                    }
+                }
+            })
+            .add({
+                combo: keymap.abajo,
+                callback: function(){
+                    if($rootScope.creditosExcedente > 0) {
+                        $rootScope.creditosExcedente--;
+                        $rootScope.creditos++;
+                        $rootScope.guardarCreditos();
+                    }
+                }
+            })
 
 
     });

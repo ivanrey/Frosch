@@ -5,7 +5,6 @@
     <title>Frosch</title>
 
 
-
     <script>
         less = {
             env: "development",
@@ -62,7 +61,10 @@
 <body ng-app="Frosch">
 
 <div class="espacio">
-    <div class="creditos font-cs" ng-show="creditos > 0"><img src="assets/img/credito.png"> {{ creditos }}</div>
+    <div class="creditos font-cs">
+        <div ng-show="creditos > 0"><img src="assets/img/credito.png"> {{ creditos }}</div>
+        <div ng-show="creditosExcedente > 0" class="excedente">+ {{ creditosExcedente }}</div>
+    </div>
     <ui-view></ui-view>
 </div>
 
