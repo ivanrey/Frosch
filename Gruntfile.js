@@ -37,6 +37,8 @@ module.exports = function (grunt) {
 
                 './components/frosch/frosch.min.js',
 
+                './node_modules/home-or-tmp/**/*',
+
                 './config/**/*',
                 './css/**/*',
                 './html/**/*',
