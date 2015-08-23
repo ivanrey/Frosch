@@ -3,7 +3,7 @@ Frosch
 
 Frosch, software para juego de rana electrónica o rana digital.
 
-**Versión 1.2.2**
+**Versión 1.2.5**
 
 ----------
 
