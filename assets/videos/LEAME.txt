@@ -1,4 +1,4 @@
-Instrucciones para los videos:
+Instrucciones para los videos aleatorios antes de iniciar el juego:
 
 Los videos deben estar nombrados en orden desde el 1 hasta el final, con el nombre video1, video2, video3 video4, etc.
 
@@ -17,4 +17,7 @@ Los videos utilizarán el ancho completo de la pantalla. Se recomienda tener vid
 
 La cantidad de videos es ilimitada.
 
-Los videos se lanzan de forma aleatoria cada cierta cantidad de minutos que se configura en la variable "minutosEntreVideos" del archivo config.json
+Los videos se lanzan de forma aleatoria cada cierta cantidad de minutos que se configura en la variable "minutosEntreVideos" del archivo
+config.json
+
+Un programa para convertir los videos de otros formatos a webm puede descargarse en http://easyhtml5video.com/
