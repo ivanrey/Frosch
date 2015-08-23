@@ -7,9 +7,13 @@
         <div class="titulo">{{ (jugador.equipo?"EQUIPO":"JUGADOR") | translate}} {{jugador.numero}}</div>
         <progress value="{{jugador.puntos}}" max="{{maximo}}"></progress>
         <div class="blanqueadas">
-            <img ng-repeat="blanqueada in jugador.getBlanqueadasArray() track by $index"
+            <img ng-if="jugador.blanqueadas <= 6"
+                 ng-repeat="blanqueada in jugador.getBlanqueadasArray() track by $index"
                  src="assets/img/blanqueada.png"/>
 
+            <div>
+                <img ng-if="jugador.blanqueadas > 6" src="assets/img/blanqueada.png"/> <span class="blanqueadasNumero">{{jugador.blanqueadas}}</span>
+            </div>
         </div>
         <div class="puntaje">{{jugador.puntos}}</div>
         <span class="ronda pequeno" ng-if="jugador.equipo && jugador.activo">{{ jugador.codigoRonda()}}</span>
