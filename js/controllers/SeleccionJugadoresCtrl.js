@@ -6,7 +6,7 @@ angular.module('Frosch')
         $scope.iniciar = function () {
             if ($scope.creditosExactos()) {
                 config.setNumJugadores($scope.numJugadores());
-                $rootScope.creditos -= $scope.numJugadores() * config.creditosPorJugador();
+                $rootScope.restarCreditos($scope.numJugadores() * config.creditosPorJugador());
                 $state.go('jugar.chico.principal');
             }
         };

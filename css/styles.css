@@ -51,6 +51,9 @@ body .espacio {
 .fondo-blanqueadas {
   background: url("../assets/img/fondo-blanqueadas.png") no-repeat;
 }
+.fondo-blanqueadas-out {
+  background: url("../assets/img/fondo-blanqueadas-out.png") no-repeat;
+}
 .grande {
   font-size: 100px;
   text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #33ff38, 0 0 70px #a1ff7d, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
@@ -196,7 +199,6 @@ video {
   left: -260px;
   float: right;
   position: relative;
-  on: relative;
 }
 .jugador .datos {
   padding-left: 80px;
@@ -234,7 +236,7 @@ video {
 }
 .jugador .datos .puntaje {
   position: relative;
-  top: -58px;
+  top: -61px;
   font-size: 45px;
   line-height: 30px;
   float: left;
@@ -248,6 +250,9 @@ video {
 .jugador .datos .blanqueadas img {
   height: 20px;
   margin: 5px;
+}
+.jugador .datos .blanqueadas .blanqueadasNumero {
+  font-size: 150%;
 }
 .monedas {
   overflow: hidden;
@@ -395,6 +400,10 @@ video {
   margin: 5px;
   right: 0;
   font-size: 30px;
+  width: 80px;
+}
+.creditos .excedente {
+  margin-top: 3px;
 }
 .ganaste > .grande {
   padding-top: 10%;

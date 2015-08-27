@@ -4,7 +4,7 @@ angular.module('Frosch')
         var jugadorCls = function (numero, config) {
             this.numero = numero;
             this.config = config;
-            this.blanqueadas = 20;
+            this.blanqueadas = 0;
             this.puntos = 0;
             this.activo = false;
 

@@ -11,7 +11,7 @@
                  ng-repeat="blanqueada in jugador.getBlanqueadasArray() track by $index"
                  src="assets/img/blanqueada.png"/>
 
-            <div>
+            <div ng-if="jugador.blanqueadas > 6">
                 <img ng-if="jugador.blanqueadas > 6" src="assets/img/blanqueada.png"/> <span class="blanqueadasNumero">{{jugador.blanqueadas}}</span>
             </div>
         </div>

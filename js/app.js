@@ -169,6 +169,11 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys', 'com.2fdevs.v
             $rootScope.creditosExcedente = localStorage.creditosExcedente ? localStorage.creditosExcedente : 0;
         };
 
+        $rootScope.restarCreditos = function(creditosUsados){
+            $rootScope.creditos -= creditosUsados;
+            $rootScope.guardarCreditos();
+        };
+
         $rootScope.cargarCreditos();
 
         var monedaAudio = new audio('moneda.ogg');
