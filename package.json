@@ -46,8 +46,11 @@
     "plugin": false
   },
   "devDependencies": {
-    "grunt": ">=0.4.5",
-    "decompress-zip": "0.0.8"
+    "bluebird": "^3.4.1",
+    "decompress-zip": "0.0.8",
+    "grunt": "^1.0.1",
+    "util": "^0.10.3",
+    "utils": "^0.3.1"
   },
   "main": "main.html",
   "node-main": "",
@@ -60,7 +63,8 @@
   },
   "dependencies": {
     "home-or-tmp": "^2.0.0",
-    "node-webkit-builder": "^1.0.8"
+    "nw-builder": "^2.2.5",
+    "bluebird": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

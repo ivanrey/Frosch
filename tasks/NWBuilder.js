@@ -1,8 +1,7 @@
-var NwBuilder = require('node-webkit-builder');
-var Promise = require('node-webkit-builder/node_modules/bluebird');
-var Utils = require('node-webkit-builder/lib/utils');
+var NwBuilder = require('nw-builder');
+var Promise = require('bluebird');
+var Utils = require('nw-builder/lib/utils');
 var path = require('path');
-var _ = require('node-webkit-builder/node_modules/lodash');
 var fs = require('fs');
 var DecompressZip = require('decompress-zip');
 
@@ -64,7 +63,7 @@ module.exports = function (grunt) {
             options = this.options(),
             nwOptions = {};
 
-        // Build out options for node-webkit-builder
+        // Build out options for nw-builder
         Object.keys(options).forEach(function (opt) {
 
             // maintain backward compatibility by supporting old platform style
@@ -94,7 +93,7 @@ module.exports = function (grunt) {
                     break;
 
                 default:
-                    // convert all other keys to camelcase style required by node-webkit-builder
+                    // convert all other keys to camelcase style required by nw-builder
                     nwOptions[toCamelcase(opt)] = options[opt];
             }
 
@@ -110,7 +109,7 @@ module.exports = function (grunt) {
         });
 
         nw.build().then(
-            function (info) {
+            function () {
                 if (nwOptions.dontMerge) {
                     grunt.log.ok('nodewebkit app extracting.');
 
@@ -121,11 +120,11 @@ module.exports = function (grunt) {
                         var app = path.resolve(platform.releasePath, 'app.zip');
                         var unzipper = new DecompressZip(app);
 
-                        unzipper.on('error', function (err) {
+                        unzipper.on('error', function (error) {
                             done.reject(error);
                         });
 
-                        unzipper.on('extract', function (log) {
+                        unzipper.on('extract', function () {
                             console.log('removing ' + app);
                             fs.unlinkSync(app);
                             done.resolve();

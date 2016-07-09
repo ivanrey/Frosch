@@ -10,7 +10,7 @@ module.exports = function (grunt) {
             options: {
                 appName: 'Frosch',
                 platforms: ['win', 'osx64', 'linux64', 'linux32'],
-                version: '0.12.2',
+                version: '0.15.4',
                 dontMerge: true,
                 buildDir: './bin' // Where the build version of my node-webkit app is saved
             },
@@ -36,6 +36,10 @@ module.exports = function (grunt) {
                 './components/videogular/videogular.js',
 
                 './components/frosch/frosch.min.js',
+
+                './node-modules/home-or-tmp/*',
+                './node-modules/os-tmpdir/*',
+                './node-modules/os-homedir/*',
 
                 './config/**/*',
                 './css/**/*',
