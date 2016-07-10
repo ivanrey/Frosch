@@ -20,7 +20,7 @@
             </div>
 
 
-            <div class="argollas">
+            <div class="centrar argollas">
                 <div class="argolla" ng-repeat="argolla in chico.jugadorActual.ultimasArgollas track by $index"
                      ng-class="{inactiva: !argolla}">
                     {{ argolla || '&nbsp'}}
@@ -50,7 +50,7 @@
 
                 <div class="pequeno">{{config.puntos}} {{"PUNTOS" | translate}}</div>
             </div>
-            <div class="argollas">
+            <div class="centrar argollas">
                 <div class="argolla"
                      ng-repeat="orificio in config.configuracion.orificios track by $index"
                      ng-class="{
