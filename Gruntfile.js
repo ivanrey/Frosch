@@ -6,12 +6,14 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        nodewebkit: {
+        nwjs: {
             options: {
                 appName: 'Frosch',
                 platforms: ['win', 'osx64', 'linux64', 'linux32'],
                 version: '0.15.4',
-                dontMerge: true,
+                zip: false,
+                macZip: false,
+                forceDownload: false,
                 buildDir: './bin' // Where the build version of my node-webkit app is saved
             },
             src: [
@@ -49,6 +51,6 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.task.loadTasks('./tasks');
-
+    //grunt.task.loadTasks('./tasks');
+    grunt.loadNpmTasks('grunt-nw-builder');
 };
