@@ -10,18 +10,19 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  font-size: 16px;
   -webkit-user-select: none;
   overflow: hidden;
   /** no scrollbars */
   background-color: black;
 }
 body .espacio {
-  width: 1280px;
-  height: 768px;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: -384px 0 0 -640px;
+  margin: -50vh 0 0 -50vw;
 }
 .view {
   width: 100%;
@@ -34,40 +35,51 @@ body .espacio {
   background-color: rgba(42, 61, 39, 0.8);
 }
 .fondo-laguna {
-  background: url("../assets/img/fondo-laguna.png") no-repeat, url("../assets/img/fondo-rana.png") no-repeat, url("../assets/img/fondo-rana-premio.png") no-repeat, url("../assets/img/fondo-monona.png") no-repeat, url("../assets/img/fondo-blanqueadas.png") no-repeat;
+  background: url("../assets/img/fondo-laguna.png") no-repeat /*,
+  url("../assets/img/fondo-rana.png") no-repeat,
+  url("../assets/img/fondo-rana-premio.png") no-repeat,
+  url("../assets/img/fondo-monona.png") no-repeat,
+  url("../assets/img/fondo-blanqueadas.png") no-repeat*/;
+  background-size: 100% 100%;
 }
 .fondo-rana {
   background: url("../assets/img/fondo-rana.png") no-repeat;
+  background-size: 100% 100%;
 }
 .fondo-rana-premio {
   background: url("../assets/img/fondo-rana-premio.png") no-repeat;
+  background-size: 100% 100%;
 }
 .fondo-ranita-premio {
   background: url("../assets/img/fondo-ranita-premio.png") no-repeat;
+  background-size: 100% 100%;
 }
 .fondo-monona {
   background: url("../assets/img/fondo-monona.png") no-repeat;
+  background-size: 100% 100%;
 }
 .fondo-blanqueadas {
   background: url("../assets/img/fondo-blanqueadas.png") no-repeat;
+  background-size: 100% 100%;
 }
 .fondo-blanqueadas-out {
   background: url("../assets/img/fondo-blanqueadas-out.png") no-repeat;
+  background-size: 100% 100%;
 }
 .grande {
-  font-size: 100px;
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #33ff38, 0 0 70px #a1ff7d, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
-  line-height: 90px;
+  font-size: 7.8vw;
+  text-shadow: 0 0 1vw #ffffff, 0 0 2vw #ffffff, 0 0 3vw #ffffff, 0 0 4vw #33ff38, 0 0 7vw #a1ff7d, 0 0 8vw #61ff6d, 0 0 10vw #89ff3e;
+  line-height: 11.7vh;
 }
 .mediano {
-  font-size: 70px;
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #eaff47, 0 0 70px #ff8554, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
-  line-height: 60px;
+  font-size: 5vw;
+  text-shadow: 0 0 1vw #ffffff, 0 0 2vw #ffffff, 0 0 3vw #ffffff, 0 0 4vw #eaff47, 0 0 7vw #ff8554, 0 0 8vw #61ff6d, 0 0 10vw #89ff3e;
+  line-height: 5vw;
 }
 .pequeno {
-  font-size: 40px;
-  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #eaff47, 0 0 70px #ff8554, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
-  line-height: 30px;
+  font-size: 4vw;
+  text-shadow: 0 0 1vw #ffffff, 0 0 2vw #ffffff, 0 0 3vw #ffffff, 0 0 4vw #eaff47, 0 0 7vw #ff8554, 0 0 8vw #61ff6d, 0 0 10vw #89ff3e;
+  line-height: 3vw;
 }
 .centrar {
   text-align: center;
@@ -76,7 +88,7 @@ body .espacio {
   clear: both;
 }
 .ranas-esquina {
-  height: 480px;
+  height: 62.5vh;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -100,22 +112,22 @@ body .espacio {
 button {
   display: inline-block;
   box-sizing: content-box;
-  width: 500px;
-  line-height: 50px;
+  width: 39.1vw;
+  line-height: 4vw;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 1.3vh 1.6vw;
   border: 1px solid #018dc4;
-  border-radius: 80px;
+  border-radius: 8vw;
   font-family: cs;
-  font-size: 40px;
+  font-size: 4vw;
   color: #000000;
   text-align: center;
   text-overflow: clip;
   background: #e8c209;
-  box-shadow: 3px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0.4vh 0.2vw 0.3vh 0 rgba(0, 0, 0, 0.2);
   text-shadow: 1px -1px 0 rgba(15, 73, 168, 0.66);
   transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-  margin: 30px 30px 30px 30px;
+  margin: 3.9vh 2.3vw 3.9vh 2.9vw;
 }
 button.seleccionado {
   background: #da8458;
@@ -127,7 +139,7 @@ button.seleccionado {
   padding-left: 15%;
 }
 .seleccionEquipos .botones button {
-  margin-top: 15px;
+  margin-top: 2vh;
 }
 .seleccionPuntos {
   padding-top: 10%;
@@ -143,22 +155,22 @@ button.seleccionado {
 .columna {
   float: left;
   height: 93%;
-  margin: 10px;
+  margin: 1.3vh 0.8vw;
 }
 .columna.jugadores {
-  width: 25%;
-  padding-top: 10px;
+  width: 25vw;
+  padding-top: 1.3vh;
 }
 .columna.monedas {
-  width: 30%;
+  width: 30vw;
   background-color: rgba(42, 61, 39, 0.8);
-  border-radius: 10px;
-  padding-top: 20px;
-  padding-left: 20px;
-  padding-right: 15px;
+  border-radius: 0.8vw;
+  padding-top: 2.6vh;
+  padding-left: 1.6vw;
+  padding-right: 2vh;
 }
 .columna.orificios {
-  width: 37.5%;
+  width: 36.5vw;
 }
 video {
   width: 100%;
@@ -167,65 +179,71 @@ video {
   padding-top: 5%;
 }
 .seleccionBlanqueada .botones {
-  width: 500px;
+  width: 39.1vw;
 }
 .seleccionBlanqueada .botones button {
-  margin: 20px 30px 15px 130px;
+  margin: 2.6vh 2.3vw 2vh 9vw;
 }
 .seleccionJugadores .jugadores progress {
   /* Important Thing */
   -webkit-appearance: none;
-  height: 258px;
-  width: 165px;
+  height: 33.3vh;
+  width: 12.7vw;
 }
 .seleccionJugadores .jugadores progress::-webkit-progress-bar {
   background: transparent url("../assets/img/desactivado.png");
+  background-size: 12.7vw 33.3vh;
 }
 .seleccionJugadores .jugadores progress::-webkit-progress-value {
   background: transparent url("../assets/img/activado.png");
+  background-size: 12.7vw 33.3vh;
 }
 .jugador {
-  height: 115px;
-  margin: 5px;
+  height: 15vh;
+  margin: 0.4vw 0.7vh;
+  clear: left;
 }
 .jugador .avatar {
-  height: 115px;
+  height: 15vh;
   float: left;
   position: relative;
-  top: -10px;
+  top: -1.3vh;
+  width: 5.72vw;
 }
 .jugador .ronda {
-  top: -35px;
-  left: -260px;
+  top: -4.6vh;
+  left: -19.05vw;
   float: right;
   position: relative;
+  width: 5vw;
+  text-align: center;
 }
 .jugador .datos {
-  padding-left: 80px;
-  padding-top: 3px;
+  padding-left: 8vw;
+  padding-top: 0.4vh;
 }
 .jugador .datos.activo {
   background-color: rgba(42, 61, 39, 0.8);
-  width: 231px;
-  padding-right: 24px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  box-shadow: 0px 0 20px 4px rgba(14, 14, 15, 0.91);
+  width: 16.5vw;
+  padding-right: 1.9vw;
+  border-top-left-radius: 1.3vh;
+  border-bottom-left-radius: 1.3vh;
+  box-shadow: 0 0 2.6vh 0.3vw rgba(14, 14, 15, 0.91);
 }
 .jugador .datos.activo .titulo {
   color: #d89e0e;
-  text-shadow: 3px -3px 0 rgba(57, 38, 6, 0.66) !important;
+  text-shadow: 0.4vh -0.2vw 0 rgba(57, 38, 6, 0.66) !important;
 }
 .jugador .datos .titulo {
-  font-size: 30px;
-  margin: 5px;
-  line-height: 16px;
+  font-size: 2.3vw;
+  margin: 0.4vw 0.7vh;
+  line-height: 2.1vh;
   color: #eeeeee;
-  text-shadow: 3px -3px 0 rgba(15, 73, 168, 0.66);
+  text-shadow: 0.4vh -0.4vh 0 rgba(15, 73, 168, 0.66);
 }
 .jugador .datos progress {
-  width: 210px;
-  height: 30px;
+  width: 16.4vw;
+  height: 3.9vh;
   -webkit-appearance: none;
 }
 .jugador .datos progress::-webkit-progress-bar {
@@ -236,59 +254,61 @@ video {
 }
 .jugador .datos .puntaje {
   position: relative;
-  top: -61px;
-  font-size: 45px;
-  line-height: 30px;
+  top: -7.5vh;
+  font-size: 3.5vw;
+  line-height: 3.9vh;
   float: left;
-  padding-left: 5px;
+  padding-left: 0.4vw;
 }
 .jugador .datos .blanqueadas {
   text-align: right;
   overflow: hidden;
-  height: 32px;
+  height: 4.2vh;
 }
 .jugador .datos .blanqueadas img {
-  height: 20px;
-  margin: 5px;
+  height: 2.6vh;
+  margin: 0.4vw 0.7vh;
 }
 .jugador .datos .blanqueadas .blanqueadasNumero {
-  font-size: 150%;
+  font-size: 1.9vw;
 }
 .monedas {
   overflow: hidden;
 }
 .monedas .datos {
   text-align: center;
-  border-top: 2px solid #eeeeee;
+  border-top: 0.3vh solid #eeeeee;
 }
 .monedas .datos > div {
   width: 50%;
   float: left;
 }
 .monedas .datos .titulo {
-  font-size: 30px;
+  font-size: 2.3vw;
   color: #eeeeee;
-  line-height: 26px;
+  line-height: 3.4vh;
 }
 .monedas .datos .numero {
-  font-size: 50px;
-  line-height: 35px;
+  font-size: 3.9vw;
+  line-height: 4.6vh;
   color: #d89e0e;
 }
 .monedas .argollas .argolla {
-  height: 105px;
-  width: 105px;
-  line-height: 105px;
-  margin: 5px;
-  font-size: 40px;
+  height: 8.2vw;
+  width: 8.2vw;
+  line-height: 8.2vw;
+  max-width: 13.7vh;
+  max-height: 13.7vh;
+  margin: 0.4vw 0.5vh;
+  font-size: 3.1vw;
 }
 .monedas .tiros {
-  margin-top: 30px;
+  margin-top: 3.9vh;
   display: flex;
   flex-direction: column-reverse;
 }
 .monedas .tiros .tiro {
-  padding-top: 10px;
+  padding-top: 1.3vh;
   clear: both;
 }
 .monedas .tiros .tiro .titulo,
@@ -296,18 +316,20 @@ video {
   color: #aaa;
 }
 .orificios .meta span {
-  line-height: 26px;
+  line-height: 3.4vh;
   font-size: x-large;
 }
 .orificios .argollas {
-  margin-top: 20px;
+  margin-top: 2.6vh;
 }
 .orificios .argollas .argolla {
-  height: 130px;
-  width: 130px;
-  line-height: 130px;
-  margin: 5px;
-  font-size: 50px;
+  height: 10.2vw;
+  width: 10.2vw;
+  line-height: 10.2vw;
+  max-width: 16.9vh;
+  max-height: 16.9vh;
+  margin: 0.4vw 0.5vh;
+  font-size: 3.9vw;
 }
 .orificios .argollas .argolla.rana,
 .orificios .argollas .argolla.ranita {
@@ -323,19 +345,19 @@ video {
   padding-left: 19%;
 }
 .argolla {
-  border: solid 5px white;
+  border: solid 0.4vw white;
   background: #eeeeee;
   border-radius: 100%;
   display: inline-block;
   position: relative;
   text-align: center;
   color: #485b45;
-  box-shadow: 0 0 15px #777, inset 0 0 15px 5px #333;
+  box-shadow: 0 0 1.2vw #777, inset 0 0 1.2vw 0.4vw #333;
 }
 .argolla.inactiva {
   opacity: 0.3;
   background: #aaa;
-  box-shadow: inset 0 0 0px 5px #333;
+  box-shadow: inset 0 0 0 0.4vw #333;
 }
 .argolla.rotar {
   -webkit-transform: rotateY(360deg);
@@ -347,31 +369,31 @@ video {
   top: 30%;
 }
 .fondo-monona .monona-label {
-  background-image: url("../assets/img/monona-explosion.png");
   background-size: contain;
-  width: 966px;
-  height: 768px;
+  width: 75.5vw;
+  height: 100vh;
   -webkit-transform: rotate(-24deg);
-  padding-top: 300px;
-  padding-left: 351px;
-  background-repeat: no-repeat;
+  padding-top: 39.1vh;
+  padding-left: 27.4vw;
+  background: url("../assets/img/monona-explosion.png") no-repeat;
+  background-size: 100% 100%;
   position: absolute;
-  top: 50px;
-  left: 100px;
+  top: 6.5vh;
+  left: 7.8vw;
 }
 .finChico {
   padding-top: 2%;
 }
 .finChico .mediano {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 3.1vw;
+  line-height: 5.2vh;
 }
 .finChico ul li {
   list-style-type: none;
 }
 .finChico ul li .jugador {
   float: left;
-  height: 40px;
+  height: 5.2vh;
   clear: left;
   padding-left: 10%;
 }
@@ -391,19 +413,19 @@ video {
   padding-left: 10%;
 }
 .finChico .continuar .botones button {
-  width: 150px;
-  margin: 10px;
+  width: 11.7vw;
+  margin: 0.8vw 1.3vh;
 }
 .creditos {
   position: absolute;
   z-index: 100;
-  margin: 5px;
+  margin: 0.4vw 0.7vh;
   right: 0;
-  font-size: 30px;
-  width: 80px;
+  font-size: 2.3vw;
+  width: 6.3vw;
 }
 .creditos .excedente {
-  margin-top: 3px;
+  margin-top: 0.4vh;
 }
 .ganaste > .grande {
   padding-top: 10%;
@@ -414,20 +436,20 @@ button.inicio {
   right: 10%;
 }
 .primer-ganador {
-  background-image: url('../assets/img/estrella.png');
-  background-repeat: no-repeat;
-  width: 32px;
-  height: 32px;
+  background: url('../assets/img/estrella.png') no-repeat;
+  background-size: 2.5vw 4.2vh;
+  width: 2.5vw;
+  height: 4.2vh;
   display: inline-block;
-  margin-left: -40px;
+  margin-left: -5.2vh;
 }
 /** coin */
 .coin p {
   position: absolute;
-  font-size: 28px;
+  font-size: 2.2vw;
   z-index: 700;
-  top: -23px;
-  left: 16px;
+  top: -3vh;
+  left: 1.3vw;
 }
 .coin.silver p {
   color: #a0a0a0;
@@ -437,59 +459,56 @@ button.inicio {
   content: "";
   display: inline-block;
   position: relative;
-  margin: 5px;
-  margin-right: 5%;
-  top: -6px;
-  border-radius: 50px;
+  margin: 0.7vh 5% 0.7vh 0.4vw;
+  top: -0.8vh;
+  border-radius: 3.9vw;
   z-index: 500;
   float: left;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0.3vh 0.2vw 0.3vh 0.1vw rgba(0, 0, 0, 0.1);
 }
 .coin:after {
   content: "";
-  width: 42px;
-  height: 42px;
+  width: 3.3vw;
+  height: 3.3vw;
   display: block;
-  top: 4px;
-  left: 4px;
+  top: 0.5vh;
+  left: 0.3vw;
   position: absolute;
-  border-radius: 50px;
+  border-radius: 3.9vw;
   z-index: 600;
 }
 .coin:before {
   content: "";
-  width: 50px;
-  height: 50px;
+  width: 3.9vw;
+  height: 3.9vw;
   display: block;
   position: absolute;
-  border-radius: 50px;
+  border-radius: 3.9vw;
   z-index: 500;
 }
 .coin:hover {
   top: -1px;
   transition: all 0.5s ease-in-out;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.4vw 0.1vw rgba(0, 0, 0, 0.2);
 }
 .silver {
   background: linear-gradient(45deg, #a0a0a0 0%, #e8e8e8 56%);
 }
 .silver:before {
   background: linear-gradient(45deg, #b5b5b5 0%, #fcfcfc 56%, #e8e8e8 96%);
-  border: 1px solid #b5b5b5;
+  border: 0.1vw solid #b5b5b5;
 }
 .silver:after {
   background: linear-gradient(45deg, #b5b5b5 0%, #fcfcfc 56%, #e8e8e8 96%);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
-  border-right: 1px solid rgba(160, 160, 160, 0.5);
+  border: 0.1vw solid rgba(255, 255, 255, 0.3);
+  border-right-color: rgba(160, 160, 160, 0.5);
+  border-bottom-color: rgba(160, 160, 160, 0.3);
   box-shadow: inset 0px 0px 2px 2px rgba(150, 150, 150, 0.05);
 }
 .silver:hover:after {
   background: linear-gradient(45deg, #b5b5b5 0%, #fcfcfc 38%, #e8e8e8 96%);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
-  border-right: 1px solid rgba(160, 160, 160, 0.5);
-  box-shadow: inset 0px 0px 2px 2px rgba(150, 150, 150, 0.05);
+  border: 0.1vw solid rgba(255, 255, 255, 0.3);
+  border-right-color: rgba(160, 160, 160, 0.5);
+  border-bottom-color: rgba(160, 160, 160, 0.3);
+  box-shadow: inset 0 0 0.2vw 0.2vw rgba(150, 150, 150, 0.05);
 }
