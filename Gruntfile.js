@@ -12,7 +12,6 @@ module.exports = function (grunt) {
                 platforms: ['win', 'osx64', 'linux64', 'linux32'],
                 version: '0.15.4',
                 zip: false,
-                macZip: false,
                 forceDownload: false,
                 buildDir: './bin' // Where the build version of my node-webkit app is saved
             },
