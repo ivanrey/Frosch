@@ -1,6 +1,6 @@
 {
   "name": "Frosch",
-  "version": "1.2.7",
+  "version": "1.3.0",
   "authors": [
     "Ivan Rey <ivan.rey@inp.co>"
   ],
@@ -30,19 +30,15 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4",
+    "angular": "~1.5",
     "frosch": "ivanrey/Frosch#frosch",
-    "angular-ui-router": "~0.2",
+    "angular-ui-router": "*",
     "angular-translate": "~2.4",
     "less": "~2",
     "angular-hotkeys": "chieffancypants/angular-hotkeys#~1.4",
     "angular-translate-loader-static-files": "~2.4",
     "jquery": "~2",
-    "videogular": "~1.2.4",
-    "angular-sanitize": "~1.4.3"
-  },
-  "resolutions": {
-    "angular": "1.3.17",
-    "angular-sanitize": "~1.3.x"
+    "videogular": "~1",
+    "angular-sanitize": "~1.5"
   }
 }

@@ -12,28 +12,32 @@
 @color-contraste: #d89e0e;
 @blanco: #eee;
 @fondo-suave: @fondo-principal + 30;
+@size: 100% 100%;
 
-.cuadrado(@ancho) {
+.cuadrado(@ancho, @max-alto) {
   height: @ancho;
   width: @ancho;
   line-height: @ancho;
+  max-width: @max-alto;
+  max-height: @max-alto;
 }
 
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+  font-size: 16px;
   -webkit-user-select: none;
   overflow: hidden; /** no scrollbars */
   background-color: black;
 
   .espacio {
-    width: 1280px;
-    height: 768px;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     left: 50%;
     top: 50%;
-    margin: -384px 0 0 -640px;
+    margin: -50vh 0 0 -50vw;
   }
 }
 
@@ -50,53 +54,60 @@ body {
 }
 
 .fondo-laguna {
-  background: url("../assets/img/fondo-laguna.png") no-repeat,
+  background: url("../assets/img/fondo-laguna.png") no-repeat /*,
   url("../assets/img/fondo-rana.png") no-repeat,
   url("../assets/img/fondo-rana-premio.png") no-repeat,
   url("../assets/img/fondo-monona.png") no-repeat,
-  url("../assets/img/fondo-blanqueadas.png") no-repeat;
+  url("../assets/img/fondo-blanqueadas.png") no-repeat*/;
+  background-size: @size;
 }
 
 .fondo-rana {
   background: url("../assets/img/fondo-rana.png") no-repeat;
+  background-size: @size;
 }
 
 .fondo-rana-premio {
   background: url("../assets/img/fondo-rana-premio.png") no-repeat;
+  background-size: @size;
 }
 
 .fondo-ranita-premio {
   background: url("../assets/img/fondo-ranita-premio.png") no-repeat;
+  background-size: @size;
 }
 
 .fondo-monona {
   background: url("../assets/img/fondo-monona.png") no-repeat;
+  background-size: @size;
 }
 
 .fondo-blanqueadas {
   background: url("../assets/img/fondo-blanqueadas.png") no-repeat;
+  background-size: @size;
 }
 
 .fondo-blanqueadas-out {
   background: url("../assets/img/fondo-blanqueadas-out.png") no-repeat;
+  background-size: @size;
 }
 
 .grande {
-  font-size: 100px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px #33ff38, 0 0 70px #a1ff7d, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
-  line-height: 90px;
+  font-size: 7.8vw;
+  text-shadow: 0 0 1vw rgba(255, 255, 255, 1), 0 0 2vw rgba(255, 255, 255, 1), 0 0 3vw rgba(255, 255, 255, 1), 0 0 4vw #33ff38, 0 0 7vw #a1ff7d, 0 0 8vw #61ff6d, 0 0 10vw #89ff3e;
+  line-height: 11.7vh;
 }
 
 .mediano {
-  font-size: 70px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px #eaff47, 0 0 70px #ff8554, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
-  line-height: 60px;
+  font-size: 5vw;
+  text-shadow: 0 0 1vw rgba(255, 255, 255, 1), 0 0 2vw rgba(255, 255, 255, 1), 0 0 3vw rgba(255, 255, 255, 1), 0 0 4vw #eaff47, 0 0 7vw #ff8554, 0 0 8vw #61ff6d, 0 0 10vw #89ff3e;
+  line-height: 5vw;
 }
 
 .pequeno {
-  font-size: 40px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px #eaff47, 0 0 70px #ff8554, 0 0 80px #61ff6d, 0 0 100px #89ff3e;
-  line-height: 30px;
+  font-size: 4vw;
+  text-shadow: 0 0 1vw rgba(255, 255, 255, 1), 0 0 2vw rgba(255, 255, 255, 1), 0 0 3vw rgba(255, 255, 255, 1), 0 0 4vw #eaff47, 0 0 7vw #ff8554, 0 0 8vw #61ff6d, 0 0 10vw #89ff3e;
+  line-height: 3vw;
 }
 
 .centrar {
@@ -108,7 +119,7 @@ body {
 }
 
 .ranas-esquina {
-  height: 480px;
+  height: 62.5vh;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -137,22 +148,22 @@ body {
 button {
   display: inline-block;
   box-sizing: content-box;
-  width: 500px;
-  line-height: 50px;
+  width: 39.1vw;
+  line-height: 4vw;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 1.3vh 1.6vw;
   border: 1px solid #018dc4;
-  border-radius: 80px;
+  border-radius: 8vw;
   font-family: cs;
-  font-size: 40px;
+  font-size: 4vw;
   color: rgba(0, 0, 0, 1);
   text-align: center;
   text-overflow: clip;
   background: #e8c209;
-  box-shadow: 3px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0.4vh 0.2vw 0.3vh 0 rgba(0, 0, 0, 0.2);
   text-shadow: 1px -1px 0 rgba(15, 73, 168, 0.66);
   transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
-  margin: 30px 30px 30px 30px;
+  margin: 3.9vh 2.3vw 3.9vh 2.9vw;
 }
 
 button.seleccionado {
@@ -164,7 +175,7 @@ button.seleccionado {
   .botones {
     padding-left: 15%;
     button {
-      margin-top: 15px;
+      margin-top: 2vh;
     }
   }
 }
@@ -189,21 +200,21 @@ button.seleccionado {
   float: left;
   height: 93%;
 
-  margin: 10px;
+  margin: 1.3vh 0.8vw;
   &.jugadores {
-    width: 25%;
-    padding-top: 10px;
+    width: 25vw;
+    padding-top: 1.3vh;
   }
   &.monedas {
-    width: 30%;
+    width: 30vw;
     .fondo-principal;
-    border-radius: 10px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 15px;
+    border-radius: 0.8vw;
+    padding-top: 2.6vh;
+    padding-left: 1.6vw;
+    padding-right: 2vh;
   }
   &.orificios {
-    width: 37.5%;
+    width: 36.5vw;
   }
 }
 
@@ -215,9 +226,9 @@ video {
 
   padding-top: 5%;
   .botones {
-    width: 500px;
+    width: 39.1vw;
     button {
-      margin: 20px 30px 15px 130px;
+      margin: 2.6vh 2.3vw 2vh 9vw;
     }
   }
 }
@@ -226,70 +237,75 @@ video {
   progress {
     /* Important Thing */
     -webkit-appearance: none;
-    height: 258px;
-    width: 165px;
+    height: 33.3vh;
+    width: 12.7vw;
   }
 
   progress::-webkit-progress-bar {
     background: transparent url("../assets/img/desactivado.png");
+    background-size: 12.7vw 33.3vh;
   }
 
   progress::-webkit-progress-value {
     background: transparent url("../assets/img/activado.png");
+    background-size: 12.7vw 33.3vh;
   }
 }
 
 .jugador {
-  height: 115px;
-  margin: 5px;
+  height: 15vh;
+  margin: 0.4vw 0.7vh;
+  clear: left;
 
   .avatar {
-    height: 115px;
+    height: 15vh;
     float: left;
     position: relative;
-    top: -10px;
+    top: -1.3vh;
+    width: 5.72vw;
   }
 
   .ronda {
-    top: -35px;
-    left: -260px;
+    top: -4.6vh;
+    left: -19.05vw;
     float: right;
     position: relative;
-
+    width: 5vw;
+    text-align: center;
   }
 
   .datos {
 
-    padding-left: 80px;
-    padding-top: 3px;
+    padding-left: 8vw;
+    padding-top: 0.4vh;
 
     &.activo {
       .fondo-principal;
-      width: 231px;
+      width: 16.5vw;
 
       .titulo {
         color: #d89e0e;
-        text-shadow: 3px -3px 0 rgba(57, 38, 6, 0.66) !important;
+        text-shadow: 0.4vh -0.2vw 0 rgba(57, 38, 6, 0.66) !important;
       }
 
-      padding-right: 24px;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
+      padding-right: 1.9vw;
+      border-top-left-radius: 1.3vh;
+      border-bottom-left-radius: 1.3vh;
 
-      box-shadow: 0px 0 20px 4px rgba(14, 14, 15, 0.91);
+      box-shadow: 0 0 2.6vh 0.3vw rgba(14, 14, 15, 0.91);
     }
 
     .titulo {
 
-      font-size: 30px;
-      margin: 5px;
-      line-height: 16px;
+      font-size: 2.3vw;
+      margin: 0.4vw 0.7vh;
+      line-height: 2.1vh;
       color: @blanco;
-      text-shadow: 3px -3px 0 rgba(15, 73, 168, 0.66);
+      text-shadow: 0.4vh -0.4vh 0 rgba(15, 73, 168, 0.66);
     }
     progress {
-      width: 210px;
-      height: 30px;
+      width: 16.4vw;
+      height: 3.9vh;
       -webkit-appearance: none;
     }
     progress::-webkit-progress-bar {
@@ -302,23 +318,23 @@ video {
 
     .puntaje {
       position: relative;
-      top: -61px;
-      font-size: 45px;
-      line-height: 30px;
+      top: -7.5vh;
+      font-size: 3.5vw;
+      line-height: 3.9vh;
       float: left;
-      padding-left: 5px;
+      padding-left: 0.4vw;
     }
 
     .blanqueadas {
       text-align: right;
       overflow: hidden;
-      height: 32px;
+      height: 4.2vh;
       img {
-        height: 20px;
-        margin: 5px;
+        height: 2.6vh;
+        margin: 0.4vw 0.7vh;
       }
       .blanqueadasNumero {
-        font-size: 150%;
+        font-size: 1.9vw;
       }
     }
   }
@@ -328,7 +344,7 @@ video {
   .datos {
 
     text-align: center;
-    border-top: 2px solid @blanco;
+    border-top: 0.3vh solid @blanco;
 
     > div {
       width: 50%;
@@ -336,33 +352,33 @@ video {
     }
 
     .titulo {
-      font-size: 30px;
+      font-size: 2.3vw;
       color: @blanco;
-      line-height: 26px;
+      line-height: 3.4vh;
     }
 
     .numero {
-      font-size: 50px;
-      line-height: 35px;
+      font-size: 3.9vw;
+      line-height: 4.6vh;
       color: @color-contraste;
     }
   }
 
   .argollas {
     .argolla {
-      .cuadrado(105px);
-      margin: 5px;
-      font-size: 40px;
+      .cuadrado(8.2vw, 13.7vh);
+      margin: 0.4vw 0.5vh;
+      font-size: 3.1vw;
     }
   }
 
   .tiros {
 
-    margin-top: 30px;
+    margin-top: 3.9vh;
     display: flex;
     flex-direction: column-reverse;
     .tiro {
-      padding-top: 10px;
+      padding-top: 1.3vh;
       clear: both;
 
       .titulo, .numero {
@@ -377,17 +393,17 @@ video {
 .orificios {
   .meta {
     span {
-      line-height: 26px;
+      line-height: 3.4vh;
       font-size: x-large;
     }
   }
 
   .argollas {
-    margin-top: 20px;
+    margin-top: 2.6vh;
     .argolla {
-      .cuadrado(130px);
-      margin: 5px;
-      font-size: 50px;
+      .cuadrado(10.2vw, 16.9vh);
+      margin: 0.4vw 0.5vh;
+      font-size: 3.9vw;
 
       &.rana, &.ranita {
         background-color: @color-contraste;
@@ -411,19 +427,19 @@ video {
 }
 
 .argolla {
-  border: solid 5px white;
+  border: solid 0.4vw white;
   background: @blanco;
   border-radius: 100%;
   display: inline-block;
   position: relative;
   text-align: center;
   color: @fondo-suave;
-  box-shadow: 0 0 15px #777, inset 0 0 15px 5px #333;
+  box-shadow: 0 0 1.2vw #777, inset 0 0 1.2vw 0.4vw #333;
 
   &.inactiva {
     opacity: 0.3;
     background: #aaa;
-    box-shadow: inset 0 0 0px 5px #333;
+    box-shadow: inset 0 0 0 0.4vw #333;
 
   }
 
@@ -440,25 +456,25 @@ video {
 }
 
 .fondo-monona .monona-label {
-  background-image: url("../assets/img/monona-explosion.png");
   background-size: contain;
-  width: 966px;
-  height: 768px;
+  width: 75.5vw;
+  height: 100vh;
   -webkit-transform: rotate(-24deg);
-  padding-top: 300px;
-  padding-left: 351px;
-  background-repeat: no-repeat;
+  padding-top: 39.1vh;
+  padding-left: 27.4vw;
+  background: url("../assets/img/monona-explosion.png") no-repeat;
+  background-size: @size;
   position: absolute;
-  top: 50px;
-  left: 100px;
+  top: 6.5vh;
+  left: 7.8vw;
 }
 
 .finChico {
   padding-top: 2%;
 
   .mediano {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 3.1vw;
+    line-height: 5.2vh;
   }
 
   ul {
@@ -467,7 +483,7 @@ video {
 
       .jugador {
         float: left;
-        height: 40px;
+        height: 5.2vh;
         clear: left;
         padding-left: 10%;
       }
@@ -491,8 +507,8 @@ video {
     .botones {
       padding-left: 10%;
       button {
-        width: 150px;
-        margin: 10px;
+        width: 11.7vw;
+        margin: 0.8vw 1.3vh;
       }
     }
   }
@@ -502,12 +518,12 @@ video {
 .creditos {
   position: absolute;
   z-index: 100;
-  margin: 5px;
+  margin: 0.4vw 0.7vh;
   right: 0;
-  font-size: 30px;
-  width: 80px;
+  font-size: 2.3vw;
+  width: 6.3vw;
   .excedente {
-    margin-top: 3px;
+    margin-top: 0.4vh;
   }
 }
 
@@ -526,21 +542,21 @@ button.inicio {
 }
 
 .primer-ganador {
-  background-image: url('../assets/img/estrella.png');
-  background-repeat: no-repeat;
-  width: 32px;
-  height: 32px;
+  background: url('../assets/img/estrella.png') no-repeat;
+  background-size: 2.5vw 4.2vh;
+  width: 2.5vw;
+  height: 4.2vh;
   display: inline-block;
-  margin-left: -40px;
+  margin-left: -5.2vh;
 }
 
 /** coin */
 .coin p {
   position: absolute;
-  font-size: 28px;
+  font-size: 2.2vw;
   z-index: 700;
-  top: -23px;
-  left: 16px;
+  top: -3vh;
+  left: 1.3vw;
 }
 
 .coin.silver p {
@@ -552,41 +568,40 @@ button.inicio {
   content: "";
   display: inline-block;
   position: relative;
-  margin: 5px;
-  margin-right: 5%;
-  top: -6px;
-  border-radius: 50px;
+  margin: 0.7vh 5% 0.7vh 0.4vw;
+  top: -0.8vh;
+  border-radius: 3.9vw;
   z-index: 500;
   float: left;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .1);
+  box-shadow: 0.3vh 0.2vw 0.3vh 0.1vw rgba(0, 0, 0, .1);
 }
 
 .coin:after {
   content: "";
-  width: 42px;
-  height: 42px;
+  width: 3.3vw;
+  height: 3.3vw;
   display: block;
-  top: 4px;
-  left: 4px;
+  top: 0.5vh;
+  left: 0.3vw;
   position: absolute;
-  border-radius: 50px;
+  border-radius: 3.9vw;
   z-index: 600;
 }
 
 .coin:before {
   content: "";
-  width: 50px;
-  height: 50px;
+  width: 3.9vw;
+  height: 3.9vw;
   display: block;
   position: absolute;
-  border-radius: 50px;
+  border-radius: 3.9vw;
   z-index: 500;
 }
 
 .coin:hover {
   top: -1px;
   transition: all .5s ease-in-out;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 0.4vw 0.1vw rgba(0, 0, 0, .2);
 }
 
 .silver {
@@ -595,23 +610,21 @@ button.inicio {
 
 .silver:before {
   background: linear-gradient(45deg, rgba(181, 181, 181, 1) 0%, rgba(252, 252, 252, 1) 56%, rgba(232, 232, 232, 1) 96%);
-  border: 1px solid rgba(181, 181, 181, 1);
+  border: 0.1vw solid rgba(181, 181, 181, 1);
 }
 
 .silver:after {
   background: linear-gradient(45deg, rgba(181, 181, 181, 1) 0%, rgba(252, 252, 252, 1) 56%, rgba(232, 232, 232, 1) 96%);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
-  border-right: 1px solid rgba(160, 160, 160, 0.5);
+  border: 0.1vw solid rgba(255, 255, 255, 0.3);
+  border-right-color: rgba(160, 160, 160, 0.5);
+  border-bottom-color: rgba(160, 160, 160, 0.3);
   box-shadow: inset 0px 0px 2px 2px rgba(150, 150, 150, .05);
 }
 
 .silver:hover:after {
   background: linear-gradient(45deg, rgba(181, 181, 181, 1) 0%, rgba(252, 252, 252, 1) 38%, rgba(232, 232, 232, 1) 96%);
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgba(160, 160, 160, 0.3);
-  border-right: 1px solid rgba(160, 160, 160, 0.5);
-  box-shadow: inset 0px 0px 2px 2px rgba(150, 150, 150, .05);
+  border: 0.1vw solid rgba(255, 255, 255, 0.3);
+  border-right-color: rgba(160, 160, 160, 0.5);
+  border-bottom-color: rgba(160, 160, 160, 0.3);
+  box-shadow: inset 0 0 0.2vw 0.2vw rgba(150, 150, 150, .05);
 }
