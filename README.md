@@ -108,6 +108,5 @@ ROADMAP BOLIRANA
 - [ ] Opción con 3 botones
 - [ ] Opción Botellita
 - [ ] Distribución Bolirana con más hoyos
-
-
+- [ ] Opción de intercambio rápido entre rana y bolirana
 
