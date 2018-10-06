@@ -99,4 +99,15 @@ También es conocido como:
  - Toad in the hole (UK - Reino Unido)
 
 
+ROADMAP BOLIRANA
+================
+
+- [ ] 1 crédito por juego no por jugador
+- [ ] Ruleta para blanqueada
+- [ ] Ruleta para Rana y Ranita
+- [ ] Opción con 3 botones
+- [ ] Opción Botellita
+- [ ] Distribución Bolirana con más hoyos
+
+
 
