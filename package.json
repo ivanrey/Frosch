@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-nw-builder": "^2.2.5"
+    "grunt-nw-builder": "3"
   },
   "main": "main.html",
   "node-main": "",
