@@ -32,7 +32,7 @@
   "dependencies": {
     "angular": "~1.5",
     "frosch": "ivanrey/Frosch#frosch",
-    "angular-ui-router": "*",
+    "angular-ui-router": "0.*",
     "angular-translate": "~2.4",
     "less": "~2",
     "angular-hotkeys": "chieffancypants/angular-hotkeys#~1.4",
