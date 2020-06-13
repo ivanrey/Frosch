@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/ivanrey/Frosch.git"
   },
-  "name": "Frosch",
+  "name": "frosch",
   "nodejs": true,
   "description": "Frosch software para juego de rana electrónica",
   "single-instance": true,
