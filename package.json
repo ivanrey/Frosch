@@ -45,11 +45,7 @@
     "java": false,
     "plugin": false
   },
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-nw-builder": "3"
-  },
-  "main": "main.html",
+  "main": "main.js",
   "node-main": "",
   "bugs": {
     "url": "https://github.com/ivanrey/Frosch/issues"
@@ -59,11 +55,28 @@
     "doc": "docs"
   },
   "dependencies": {
-    "home-or-tmp": "^2.0.0"
+    "Frosch": "git://github.com/ivanrey/Frosch.git#frosch",
+    "angular": "1.5.11",
+    "angular-hotkeys": "^1.4",
+    "angular-sanitize": "1.5.11",
+    "angular-translate": "^2.4",
+    "angular-translate-loader-static-files": "^2.4",
+    "angular-ui-router": "0.*",
+    "home-or-tmp": "^2.0.0",
+    "jquery": "^2",
+    "less": "^2",
+    "videogular": "^1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'components', 'junction') } catch (e) { }\""
   },
   "author": "Ivan Rey",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^9.0.4"
+  },
+  "engines": {
+    "yarn": ">= 1.0.0"
+  }
 }

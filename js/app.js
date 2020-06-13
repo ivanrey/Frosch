@@ -182,11 +182,7 @@ angular.module('Frosch', ['ui.router', 'translate', 'cfp.hotkeys', 'com.2fdevs.v
     .add({
       combo: 's s s',
       callback: function () {
-        // Cargar node-webkit
-        var gui = require('nw.gui');
-
-        // Salir
-        gui.App.quit();
+        window.close();
 
       }
     })

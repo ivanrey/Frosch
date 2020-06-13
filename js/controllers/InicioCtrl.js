@@ -15,9 +15,11 @@ angular.module('Frosch')
         $scope.videos = [];
 
         function cargarVideo(numero) {
-            var videoURL = 'assets/videos/video' + numero + '.webm';
-            $http.head(videoURL)
-                .success(function () {
+            let videoURL = 'assets/videos/video' + numero + '.webm';
+            let promise = $http.head(videoURL);
+            console.log(promise);
+            if(promise)
+                promise.then(function () {
                     $scope.videos.push([{
                         src: videoURL,
                         type: "video/webm"

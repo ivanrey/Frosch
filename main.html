@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Frosch</title>
 
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
 
     <script>
         less = {
@@ -19,15 +21,15 @@
     </script>
     <link rel="stylesheet/less" type="text/css" href="css/styles.less">
     <script src="js/services/errorHandler.js"></script>
-    <script src="components/jquery/dist/jquery.js"></script>
-    <script src="components/less/dist/less.js"></script>
-    <script src="components/angular/angular.js"></script>
-    <script src="components/angular-translate/angular-translate.js"></script>
-    <script src="components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
-    <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="components/angular-hotkeys/build/hotkeys.js"></script>
-    <script src="components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="components/videogular/videogular.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/less/dist/less.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-translate/dist/angular-translate.js"></script>
+    <script src="node_modules/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="node_modules/angular-hotkeys/build/hotkeys.js"></script>
+    <script src="node_modules/angular-sanitize/angular-sanitize.js"></script>
+    <script src="node_modules/videogular/videogular.js"></script>
     <script src="js/translate.js"></script>
 
     <script src="js/app.js"></script>
@@ -40,7 +42,7 @@
     <script src="js/controllers/PrincipalCtrl.js"></script>
     <script src="js/controllers/NotificacionCtrl.js"></script>
     <script src="js/controllers/FinChicoCtrl.js"></script>
-    <script src="components/frosch/frosch.min.js"></script>
+    <script src="node_modules/Frosch/frosch.min.js"></script>
 
 
     <script src="js/directives/botonera.js"></script>
