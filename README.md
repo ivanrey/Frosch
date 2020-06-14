@@ -67,13 +67,29 @@ Los sonidos utilizados son los que corresponden al código del idioma en la carp
 
 **Extender el sistema**
 
+Para desarrollar nuevas funcionalidades siga las siguientes instrucciones:
+
+- [Instalar NodeJS](https://nodejs.org/en/download/ "(target|_blank)")
+- [Instalar Yarn](https://yarnpkg.com/getting-started/install "(target|_blank)")
+- `git clone https://github.com/ivanrey/Frosch.git`
+- `cd Frosch`
+- Instalar dependencias de electron `yarn`
+- Instalar dependencias del app 
+    - `cd app`
+    - `yarn` (estando en carpeta app)
+- Lanzar la app `yarn start`
+
+Todo el código está en la carpeta `app` y sigue las convenciones de una aplicación angularjs v1.5
+
+Para distribuir la aplicación, es decir, crear los ejecutables
+`yarn dist`
+
+Para más instrucciones de como compilar lea las [Instrucciones de Electron-Builder](https://www.electron.build/ "(target|_blank)")
+
 **Idiomas**
 
 Actualmente tiene versión en español colombiano (por defecto), versión en inglés y en francés.
 
-
-
-Próximamente más instrucciones.
 
 CRÉDITOS
 ========
