@@ -2,7 +2,7 @@
   "name": "frosch",
   "productName": "Frosch",
   "description": "Frosch software para juego de rana electrónica",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "main": "main.js",
   "dependencies": {
     "angular": "1.5.11",
