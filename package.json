@@ -62,7 +62,7 @@
     "electronica",
     "juego"
   ],
-  "version": "1.4.1",
+  "version": "1.4.2",
   "main": "app/main.js",
   "bugs": {
     "url": "https://github.com/ivanrey/Frosch/issues"
