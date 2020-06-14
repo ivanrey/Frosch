@@ -9,6 +9,29 @@ Frosch, software para juego de rana electrónica o rana digital.
 
 **Instalación**
 
+Descargue la versión acorde a su sistema operativo y arquitectura:
+
+- Windows
+  - Arquitectura de 64 bits
+    - [Instalador](/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.exe)
+    - [Portable](/ivanrey/Frosch/releases/latest/download/Frosch-1.4.2.exe) (Esta modalidad no es configurable)
+    - [Extraíble](/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-win.zip)
+  - Arquitectura de 32 bits
+    - [Instalador](/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.exe)
+    - [Portable](/ivanrey/Frosch/releases/latest/download/Frosch-1.4.2.exe) (Esta modalidad no es configurable)
+    - [Extraíble](/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-ia32-win.zip)
+- Linux
+  - Arquitectura de 64 bits
+    - [Instalador](/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.AppImage) (AppImge)
+    - [Extraíble](/ivanrey/Frosch/releases/latest/download/frosch-1.4.2.zip)
+  - Arquitectura de 32 bits
+    - [Instalador](/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.AppImage) (AppImge)
+    - [Extraíble](/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-ia32.zip)
+- Mac
+  - Arquitectura de 64 bits
+    - [Instalador](/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.dmg) (DMG)
+    - [Extraíble](/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-mac.zip) (DMG)
+    
 **Configuración**
 
 Para configurar edite el archivo `config/config.json`

@@ -6,7 +6,17 @@
     "copyright": "Copyright © 2018 ${author}",
     "mac": {
       "category": "public.app-category.games",
-      "icon": "icon.icns"
+      "icon": "icon.icns",
+      "target": "dmg"
+    },
+    "linux": {
+      "target": {
+        "target":"zip",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      }
     },
     "win": {
       "target": [
@@ -72,6 +82,7 @@
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
+    "publish-dist": "electron-builder -lmw --publish always",
     "postinstall": "electron-builder install-app-deps"
   },
   "author": "Ivan Rey",
