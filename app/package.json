@@ -1,0 +1,24 @@
+{
+  "name": "frosch",
+  "productName": "Frosch",
+  "description": "Frosch software para juego de rana electrónica",
+  "version": "1.4.0",
+  "main": "main.js",
+  "dependencies": {
+    "Frosch": "git://github.com/ivanrey/Frosch.git#frosch",
+    "angular": "1.5.11",
+    "angular-hotkeys": "^1.4",
+    "angular-sanitize": "1.5.11",
+    "angular-translate": "^2.4",
+    "angular-translate-loader-static-files": "^2.4",
+    "angular-ui-router": "0.*",
+    "home-or-tmp": "^2.0.0",
+    "jquery": "^2",
+    "videogular": "^1"
+  },
+  "author": "Ivan Rey",
+  "license": "MIT",
+  "engines": {
+    "yarn": ">= 1.0.0"
+  }
+}

@@ -1,6 +1,5 @@
-components
-bin
+app/components
 node_modules
-cache
+dist
 .idea
 assets/videos/*.webm
