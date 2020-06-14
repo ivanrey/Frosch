@@ -2,16 +2,27 @@
   "build": {
     "appId": "com.github.ivanrey.Frosch",
     "productName": "Frosch",
+    "asar": false,
     "copyright": "Copyright © 2018 ${author}",
     "mac": {
       "category": "games"
+    },
+    "win": {
+      "target": "dir"
     },
     "directories": {
       "app": "app",
       "output": "dist"
     },
-    "files":[ "**/*"]
+    "files": [
+      "**/*"
+    ]
   },
+  "publish": [
+    {
+      "provider": "github"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ivanrey/Frosch.git"
@@ -25,7 +36,7 @@
     "electronica",
     "juego"
   ],
-  "version": "1.4.0",
+  "version": "1.4.1",
   "main": "app/main.js",
   "bugs": {
     "url": "https://github.com/ivanrey/Frosch/issues"
