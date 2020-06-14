@@ -28,7 +28,7 @@ Descargue la versión acorde a su sistema operativo y arquitectura:
 - Mac
   - Arquitectura de 64 bits
     - [Instalador](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-1.4.2.dmg) (DMG)
-    - [Extraíble](https://github.com/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-mac.zip) 
+    - [Extraíble](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-1.4.2-mac.zip) 
     
 **Configuración**
 
