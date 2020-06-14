@@ -13,24 +13,24 @@ Descargue la versión acorde a su sistema operativo y arquitectura:
 
 - Windows
   - Arquitectura de 64 bits
-    - [Instalador](/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.exe)
-    - [Portable](/ivanrey/Frosch/releases/latest/download/Frosch-1.4.2.exe) (Esta modalidad no es configurable)
-    - [Extraíble](/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-win.zip)
+    - [Instalador](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.exe)
+    - [Portable](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-1.4.2.exe) (Esta modalidad no es configurable)
+    - [Extraíble](https://github.com/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-win.zip)
   - Arquitectura de 32 bits
-    - [Instalador](/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.exe)
-    - [Portable](/ivanrey/Frosch/releases/latest/download/Frosch-1.4.2.exe) (Esta modalidad no es configurable)
-    - [Extraíble](/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-ia32-win.zip)
+    - [Instalador](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.exe)
+    - [Portable](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-1.4.2.exe) (Esta modalidad no es configurable)
+    - [Extraíble](https://github.com/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-ia32-win.zip)
 - Linux
   - Arquitectura de 64 bits
-    - [Instalador](/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.AppImage) (AppImge)
-    - [Extraíble](/ivanrey/Frosch/releases/latest/download/frosch-1.4.2.zip)
+    - [Instalador](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.AppImage) (AppImge)
+    - [Extraíble](https://github.com/ivanrey/Frosch/releases/latest/download/frosch-1.4.2.zip)
   - Arquitectura de 32 bits
-    - [Instalador](/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.AppImage) (AppImge)
-    - [Extraíble](/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-ia32.zip)
+    - [Instalador](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.AppImage) (AppImge)
+    - [Extraíble](https://github.com/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-ia32.zip)
 - Mac
   - Arquitectura de 64 bits
-    - [Instalador](/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.dmg) (DMG)
-    - [Extraíble](/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-mac.zip) (DMG)
+    - [Instalador](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-Setup-1.4.2.dmg) (DMG)
+    - [Extraíble](https://github.com/ivanrey/Frosch/releases/latest/download/frosch-1.4.2-mac.zip) (DMG)
     
 **Configuración**
 
