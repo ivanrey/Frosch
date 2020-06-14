@@ -5,7 +5,8 @@
     "asar": false,
     "copyright": "Copyright © 2018 ${author}",
     "mac": {
-      "category": "games"
+      "category": "public.app-category.games",
+      "icon": "icon.icns"
     },
     "win": {
       "target": "dir"
@@ -16,13 +17,13 @@
     },
     "files": [
       "**/*"
+    ],
+    "publish": [
+      {
+        "provider": "github"
+      }
     ]
   },
-  "publish": [
-    {
-      "provider": "github"
-    }
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ivanrey/Frosch.git"
