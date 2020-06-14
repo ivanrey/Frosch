@@ -9,12 +9,37 @@
       "icon": "icon.icns"
     },
     "win": {
-      "target": "dir"
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
     },
     "directories": {
       "app": "app",
       "output": "dist"
     },
+    "extraFiles": [
+      "node_modules/Frosch/frosch.min.js"
+    ],
     "files": [
       "**/*"
     ],

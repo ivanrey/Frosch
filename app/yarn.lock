@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"Frosch@git://github.com/ivanrey/Frosch.git#frosch":
-  version "0.0.0"
-  resolved "git://github.com/ivanrey/Frosch.git#75e1cbeff1669bc7a0d0b810380e76338737d2f8"
-
 angular-hotkeys@^1.4:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/angular-hotkeys/-/angular-hotkeys-1.7.0.tgz#052e6b6f44dfcd824427798b7f10e1917e8700a1"

@@ -5,7 +5,6 @@
   "version": "1.4.0",
   "main": "main.js",
   "dependencies": {
-    "Frosch": "git://github.com/ivanrey/Frosch.git#frosch",
     "angular": "1.5.11",
     "angular-hotkeys": "^1.4",
     "angular-sanitize": "1.5.11",
