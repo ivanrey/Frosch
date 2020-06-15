@@ -2,6 +2,7 @@
   "build": {
     "appId": "com.github.ivanrey.Frosch",
     "productName": "Frosch",
+    "artifactName": "${productName}-${os}.${ext}",
     "asar": false,
     "copyright": "Copyright © 2018 ${author}",
     "mac": {
@@ -22,20 +23,6 @@
       "target": [
         {
           "target": "nsis",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
-        },
-        {
-          "target": "portable",
-          "arch": [
-            "x64",
-            "ia32"
-          ]
-        },
-        {
-          "target": "zip",
           "arch": [
             "x64",
             "ia32"
@@ -72,7 +59,7 @@
     "electronica",
     "juego"
   ],
-  "version": "1.4.2",
+  "version": "1.4.3",
   "main": "app/main.js",
   "bugs": {
     "url": "https://github.com/ivanrey/Frosch/issues"
