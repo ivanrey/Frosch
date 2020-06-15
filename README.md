@@ -14,7 +14,10 @@ Descargue la versión acorde a su sistema operativo y arquitectura:
 - Windows
   - [Instalador](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-win.exe)
 - Linux
-  - [Extraíble](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-linux.zip)
+  - Arquitectura de 64 bits
+    - [Extraíble](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-linux-x64.zip)
+  - Arquitectura de 32 bits
+    - [Extraíble](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-linux-ia32.zip)
 - Mac
   - [Instalador](https://github.com/ivanrey/Frosch/releases/latest/download/Frosch-mac.dmg) (dmg)
 - Código Fuente

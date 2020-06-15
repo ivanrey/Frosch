@@ -11,13 +11,17 @@
       "target": "dmg"
     },
     "linux": {
+      "artifactName": "${productName}-${os}-${arch}.${ext}",
       "target": {
-        "target":"zip",
+        "target": "zip",
         "arch": [
           "x64",
           "ia32"
         ]
       }
+    },
+    "nsis": {
+      "oneClick": false
     },
     "win": {
       "target": [
