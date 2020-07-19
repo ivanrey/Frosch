@@ -6,6 +6,8 @@
 
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 
     <script>
         less = {
@@ -58,6 +60,9 @@
 
 
     <script src="js/services/audio.js"></script>
+
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
 
 </head>
 <body ng-app="Frosch">
