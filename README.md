@@ -7,6 +7,11 @@ Frosch, software para juego de rana electrónica o rana digital.
 
 ----------
 
+Existe un canal en discrod por si tienen preguntas y para enviar anuncios relacionados con el proyecto
+[Discord](https://discord.com/channels/734551945066446848/734551945066446851)
+
+----------
+
 **Instalación**
 
 Descargue la versión acorde a su sistema operativo y arquitectura:
