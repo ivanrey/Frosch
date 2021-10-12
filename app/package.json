@@ -5,7 +5,7 @@
   "version": "1.4.4",
   "main": "main.js",
   "dependencies": {
-    "angular": "1.5.11",
+    "angular": "1.8.0",
     "angular-hotkeys": "^1.4",
     "angular-sanitize": "1.5.11",
     "angular-translate": "^2.4",
