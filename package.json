@@ -79,7 +79,7 @@
   "author": "Ivan Rey",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^11.5.0",
+    "electron": "^18.3.7",
     "electron-builder": "^22.7.0"
   },
   "engines": {
